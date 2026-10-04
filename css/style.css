@@ -4124,6 +4124,11 @@ table.data tbody tr:hover { background: #faf8f4; }
   outline: 1px solid #111318;
   border-color: #111318;
 }
+/* Hide Edge/IE built-in password reveal so only .auth-eye shows */
+.auth-input input[type="password"]::-ms-reveal,
+.auth-input input[type="password"]::-ms-clear {
+  display: none;
+}
 .auth-eye {
   position: absolute;
   right: 8px;
