@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly — Blogs</title>
+  <meta name="description" content="Field reports and engineering monographs from Stackly — lighting, conduit, acoustics, and architectural commissions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+</head>
+<body>
+  <header class="header" id="top">
+    <div class="header__inner">
+      <a class="logo" href="index.html" aria-label="Stackly home">
+        <img src="Images/Stackly-logo.webp" alt="Stackly">
+      </a>
+      <nav class="nav" id="site-nav">
+        <a href="index.html#top">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="blogs.html" aria-current="page">Blogs</a>
+        <a class="nav__signin" href="login.html">Sign in</a>
+      </nav>
+      <a class="header__signin" href="login.html">Sign in</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Menu</span>
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="blogs">
+    <section class="bl-hero">
+      <div class="bl-wrap">
+        <div class="bl-hero__top">
+          <p class="bl-kicker"><i aria-hidden="true"></i>Blogs // Field notes &amp; engineering monographs</p>
+          <p class="bl-hero__aside">Updated quarterly</p>
+        </div>
+        <h1>Spatial Intelligence, Invisible<br>Engineering &amp; The Modern Estate.</h1>
+        <p class="bl-hero__copy">Field notes from architects and engineers on lighting, conduit, acoustics, and the low-voltage spine — written while the drawings are still open.</p>
+        <ul class="bl-filters" id="filters">
+          <li><a class="is-on" href="404.html">All publications</a></li>
+          <li><a href="404.html">Acoustic design</a></li>
+          <li><a href="404.html">KNX integration</a></li>
+          <li><a href="404.html">Conduit &amp; low voltage</a></li>
+          <li><a href="404.html">Thermal HVAC</a></li>
+          <li><a href="404.html">Estate case studies</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="bl-wrap" aria-label="Featured monograph">
+      <article class="bl-feature" id="feature" data-topics="acoustic estate">
+        <figure class="bl-feature__media">
+          <img id="feature-image" src="Images/Carmel-coastal-residence.webp?v=2" alt="Evening living room overlooking the coast through a wall of glass">
+          <div class="bl-tags" id="feature-tags">
+            <span>Estate case study</span>
+            <span>Acoustic</span>
+          </div>
+          <span class="bl-read" id="feature-read">12 min read</span>
+        </figure>
+        <div>
+          <p class="bl-kicker" id="feature-kicker"><i aria-hidden="true"></i>Field note · Coastal commission</p>
+          <h2 id="feature-title">Acoustic Isolations &amp; Conduit Topologies: Wiring the 18,000 Sq. Ft. Carmel Coastal Residence</h2>
+          <p class="bl-feature__copy" id="feature-copy">How concealed pathways, isolated audio zones, and a local control spine were drawn into a glass house before the finishes were specified.</p>
+          <blockquote class="bl-quote">
+            <p id="feature-quote">“The pathways had to disappear into the stone and the glass. If you can see the engineering, the room has already lost.”</p>
+            <footer id="feature-by">Marcus Vance, AIA — Head of architectural systems</footer>
+          </blockquote>
+          <div class="bl-feature__foot">
+            <a class="bl-more" id="feature-link" href="#reports">Read full monograph →</a>
+            <div class="bl-arrows">
+              <button type="button" id="feature-prev" aria-label="Previous monograph">←</button>
+              <button type="button" id="feature-next" aria-label="Next monograph">→</button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="bl-reports" id="reports">
+      <div class="bl-wrap">
+        <div class="bl-head">
+          <div>
+            <p class="bl-kicker"><i aria-hidden="true"></i>Library</p>
+            <h2>Field Reports &amp; Engineering Monographs</h2>
+            <p>Recent notes from the studio, written for architects, owners, and builders.</p>
+          </div>
+          <p class="bl-head__meta">Sorted by latest field note</p>
+        </div>
+        <div class="bl-grid">
+          <article class="bl-card" data-topics="knx acoustic">
+            <figure>
+              <img src="Images/Milled-solid-brass.webp?v=2" alt="Milled brass toggle plate set into a plaster wall">
+              <div class="bl-tags"><span>KNX</span><span>Tactile</span></div>
+              <span class="bl-read">8 min read</span>
+            </figure>
+            <div class="bl-card__body">
+              <p class="bl-card__cat">KNX &amp; specification</p>
+              <h3>Milled for Silence: The Millwork Behind a Tactile Wall Interface</h3>
+              <p>Switch geometry, engraving depth, and the bus behind a flush plate — so the wall reads as joinery, not a gadget.</p>
+              <div class="bl-by">
+                <img src="Images/Elena%20Rostova.webp" alt="">
+                <div>
+                  <strong>Elena Rostova</strong>
+                  <span>Head of spatial software</span>
+                </div>
+              </div>
+              <a href="404.html">Read report →</a>
+            </div>
+          </article>
+          <article class="bl-card" data-topics="conduit knx">
+            <figure>
+              <img src="Images/Concealed-precision.webp?v=2" alt="Open cabinet of KNX relays and labeled low-voltage wiring">
+              <div class="bl-tags"><span>Conduit</span><span>Low voltage</span></div>
+              <span class="bl-read">11 min read</span>
+            </figure>
+            <div class="bl-card__body">
+              <p class="bl-card__cat">Conduit &amp; racks</p>
+              <h3>Concealed Precision: The 12-Zone KNX HVAC &amp; Power Backbone</h3>
+              <p>Where the rack sits, how the fiber enters, and the clearance a builder needs before millwork closes around it.</p>
+              <div class="bl-by">
+                <img src="Images/Julian%20Thorne.webp" alt="">
+                <div>
+                  <strong>Julian Thorne</strong>
+                  <span>Director of low-voltage systems</span>
+                </div>
+              </div>
+              <a href="404.html">Read report →</a>
+            </div>
+          </article>
+          <article class="bl-card" data-topics="estate conduit hvac">
+            <figure>
+              <img src="Images/Pre-drywall-residential.webp?v=2" alt="Open timber framing with blue low-voltage loops before drywall">
+              <div class="bl-tags"><span>Pre-drywall</span><span>Estate</span></div>
+              <span class="bl-read">9 min read</span>
+            </figure>
+            <div class="bl-card__body">
+              <p class="bl-card__cat">Rough-in</p>
+              <h3>Pre-Drywall Coordination: DALI-2 Lighting &amp; Shade Pathways</h3>
+              <p>The sequence that keeps lighting, climate, and shade pathways reachable once plaster and stone go on.</p>
+              <div class="bl-by">
+                <img src="Images/Marcus%20Vance.webp" alt="">
+                <div>
+                  <strong>Marcus Vance</strong>
+                  <span>Principal architectural engineer</span>
+                </div>
+              </div>
+              <a href="404.html">Read report →</a>
+            </div>
+          </article>
+        </div>
+        <p class="bl-note" id="filter-note" style="color:#5e6672"></p>
+      </div>
+    </section>
+
+    <section class="bl-minds">
+      <div class="bl-wrap">
+        <div class="bl-head">
+          <div>
+            <p class="bl-kicker"><i aria-hidden="true"></i>The studio</p>
+            <h2>Contributing Minds</h2>
+            <p>The people who write the notes and stand behind the commissioning.</p>
+          </div>
+          <p class="bl-head__meta">Four authors · one desk</p>
+        </div>
+        <div class="bl-people">
+          <article class="bl-person">
+            <img src="Images/Marcus%20Vance.webp" alt="Marcus Vance seated in the studio">
+            <h3>Marcus Vance</h3>
+            <p class="bl-role">Principal architectural engineer</p>
+            <p>Ex-Foster associate. Writes the estate case studies and the drawing reviews.</p>
+            <p class="bl-stats"><span><strong>14 yrs</strong> integration</span><span><strong>KNX</strong> master</span></p>
+          </article>
+          <article class="bl-person">
+            <img src="Images/Elena%20Rostova.webp" alt="Elena Rostova at a laptop">
+            <h3>Elena Rostova</h3>
+            <p class="bl-role">Head of spatial software</p>
+            <p>Notes on tactile plates, quiet interfaces, and controls that stay out of the room.</p>
+            <p class="bl-stats"><span><strong>18</strong> field notes</span><span><strong>UX</strong> lead</span></p>
+          </article>
+          <article class="bl-person">
+            <img src="Images/Julian%20Thorne.webp" alt="Julian Thorne at a hardware bench">
+            <h3>Julian Thorne</h3>
+            <p class="bl-role">Director of low-voltage systems</p>
+            <p>rack, isolation, and pathways refer to the critical infrastructure required for networking.</p>
+            <p class="bl-stats"><span><strong>31</strong> field notes</span><span><strong>20 yr</strong> infrastructure</span></p>
+          </article>
+          <article class="bl-person">
+            <img src="Images/Maya%20Lin-Siddiq.webp" alt="Maya Lin-Siddiq beside drawings and samples">
+            <h3>Maya Lin-Siddiq</h3>
+            <p class="bl-role">Circadian &amp; acoustic designer</p>
+            <p>Daylight, DALI-2 curves, and how a room should sound when the glass is open.</p>
+            <p class="bl-stats"><span><strong>16</strong> field notes</span><span><strong>IES</strong> member</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bl-close">
+      <div class="bl-wrap bl-close__grid">
+        <div class="bl-dispatch">
+          <p class="bl-dispatch__badge">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="6" width="17" height="12" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m4.5 7.5 7.5 5.4 7.5-5.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            Quarterly Print &amp; Digital Compendium
+          </p>
+          <h2>Architectural Dispatch: Delivered Quarterly</h2>
+          <p class="bl-dispatch__copy">Join over 4,200 architects, general contractors, and luxury estate owners receiving our printed and digital technical monographs on spatial engineering.</p>
+          <form class="bl-join" id="dispatch" novalidate>
+            <label class="bl-join__field">
+              <span>Direct Work Email</span>
+              <input id="dispatch-email" type="email" placeholder="vance@architecturalstudio.com" required>
+            </label>
+            <label class="bl-join__field">
+              <span>Primary Discipline</span>
+              <select id="dispatch-role">
+                <option>Architect / Spatial Theorist</option>
+                <option>General Contractor</option>
+                <option>Interior Design Studio</option>
+                <option>Estate Owner / Principal</option>
+                <option>Electrical Engineer</option>
+              </select>
+            </label>
+            <div class="bl-join__actions">
+              <button type="submit">Subscribe to Dispatch →</button>
+              <p>Zero promotional spam. Strict technical documentation only.</p>
+            </div>
+          </form>
+          <p class="bl-note" id="dispatch-note" role="status"></p>
+          <div class="bl-dispatch__foot">
+            <p><i aria-hidden="true"></i>Print copies complimentary for registered architects</p>
+            <span>ISSN 2993-8109</span>
+          </div>
+        </div>
+
+        <aside class="bl-consult">
+          <p class="bl-consult__kicker">Engineering Consultations</p>
+          <h2>Planning a Legacy Residence? Consult With Our Engineers</h2>
+          <p>Direct engagement during schematic design avoids costly structural rework. We review electrical drawings, riser layouts, and conduit schematics before concrete pours.</p>
+          <ul class="bl-consult__list">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m8.2 12.2 2.4 2.4 5.2-5.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Schematic Plan &amp; Low-Voltage Review
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m8.2 12.2 2.4 2.4 5.2-5.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Concealed Convection &amp; Millwork Thermal Sizing
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m8.2 12.2 2.4 2.4 5.2-5.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Vendor-Independent KNX &amp; DALI Engineering
+            </li>
+          </ul>
+          <div class="bl-consult__desk">
+            <span>Direct Architectural Desk</span>
+            <a href="404.html">+1 (800) 492-STCK</a>
+          </div>
+          <a class="bl-cta" href="404.html">Book Consultation &amp; Technical Review →</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="inquire">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" aria-label="Stackly home"><img src="Images/Stackly-logo.webp" alt="Stackly"></a>
+        <p>Intelligent residential automation engineered for modern luxury residences, private estates, and architectural masterpieces.</p>
+        <p class="footer__status-label">System status</p>
+        <p class="footer__status"><span class="footer__status-dot" aria-hidden="true"></span>All Core Telemetry Operations Nominal</p>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <a href="404.html">Circadian Lighting</a>
+        <a href="404.html">HVAC Automation</a>
+        <a href="404.html">Perimeter Security</a>
+        <a href="404.html">Acoustic Cinema</a>
+        <a href="404.html">Motorized Drapery</a>
+        <a href="404.html">Wi-Fi &amp; Fiber Core</a>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <a href="about.html">About Us</a>
+        <a href="404.html">Architectural Portfolio</a>
+        <a href="404.html">Engineering Standards</a>
+        <a href="404.html">Careers at STACKLY</a>
+        <a href="404.html">Press &amp; Publications</a>
+      </div>
+      <form class="footer__form" id="newsletter" novalidate onsubmit="return false">
+        <h3>Architectural Dispatch</h3>
+        <p>Quarterly monographs on spatial technology and residential design.</p>
+        <div class="footer__form-row">
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="architect@firm.com" required>
+          <button class="btn btn--dark" type="submit">Subscribe</button>
+        </div>
+        <p class="form-note" id="form-note" role="status"></p>
+      </form>
+    </div>
+    <div class="footer__bar">
+      <p>© <span id="year"></span> STACKLY Smart Living Inc. All architectural and engineering rights reserved.</p>
+      <div>
+        <a href="404.html">Privacy Policy</a>
+        <a href="404.html">Terms of Service</a>
+        <a href="404.html">Security Architecture</a>
+        <a href="404.html">System Status</a>
+        <a href="404.html">Accessibility</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const features = [
+      {
+        topics: "acoustic estate",
+        image: "Images/Carmel-coastal-residence.webp?v=2",
+        alt: "Evening living room overlooking the coast through a wall of glass",
+        tags: ["Estate case study", "Acoustic"],
+        read: "12 min read",
+        kicker: "Field note · Coastal commission",
+        title: "Acoustic Isolations & Conduit Topologies: Wiring the 18,000 Sq. Ft. Carmel Coastal Residence",
+        copy: "How concealed pathways, isolated audio zones, and a local control spine were drawn into a glass house before the finishes were specified.",
+        quote: "“The pathways had to disappear into the stone and the glass. If you can see the engineering, the room has already lost.”",
+        by: "Marcus Vance, AIA — Head of architectural systems"
+      },
+      {
+        topics: "knx acoustic",
+        image: "Images/Milled-solid-brass.webp?v=2",
+        alt: "Milled brass toggle plate set into a plaster wall",
+        tags: ["KNX", "Tactile"],
+        read: "8 min read",
+        kicker: "Field note · Wall interfaces",
+        title: "Milled for Silence: The Millwork Behind a Tactile Wall Interface",
+        copy: "Engraving depth, plate thickness, and the bus behind a flush control so the wall reads as joinery.",
+        quote: "“A switch should feel like hardware in the room, not a product stuck onto it.”",
+        by: "Elena Rostova — Head of spatial software"
+      },
+      {
+        topics: "conduit estate",
+        image: "Images/Pre-drywall-residential.webp?v=2",
+        alt: "Open framing with low-voltage loops before drywall",
+        tags: ["Pre-drywall", "Conduit"],
+        read: "9 min read",
+        kicker: "Field note · Rough-in",
+        title: "Before the Walls Close: Rough-In for an Estate",
+        copy: "The sequence that keeps lighting, climate, and shade pathways reachable once plaster and stone go on.",
+        quote: "“Once the wall is closed, the drawing is the only map left. We write it while the studs are still visible.”",
+        by: "Julian Thorne — Director of low-voltage systems"
+      }
+    ];
+    let slide = 0;
+    function showFeature(index) {
+      slide = (index + features.length) % features.length;
+      const item = features[slide];
+      document.getElementById("feature").dataset.topics = item.topics;
+      document.getElementById("feature-image").src = item.image;
+      document.getElementById("feature-image").alt = item.alt;
+      document.getElementById("feature-tags").innerHTML = item.tags.map((tag) => "<span>" + tag + "</span>").join("");
+      document.getElementById("feature-read").textContent = item.read;
+      document.getElementById("feature-kicker").innerHTML = '<i aria-hidden="true"></i>' + item.kicker;
+      document.getElementById("feature-title").textContent = item.title;
+      document.getElementById("feature-copy").textContent = item.copy;
+      document.getElementById("feature-quote").textContent = item.quote;
+      document.getElementById("feature-by").textContent = item.by;
+    }
+    document.getElementById("feature-prev").addEventListener("click", () => showFeature(slide - 1));
+    document.getElementById("feature-next").addEventListener("click", () => showFeature(slide + 1));
+
+    document.getElementById("dispatch").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const input = document.getElementById("dispatch-email");
+      const note = document.getElementById("dispatch-note");
+      if (!input.checkValidity()) {
+        note.style.color = "#f0b4ac";
+        note.textContent = "Enter a valid work email address.";
+        input.focus();
+        return;
+      }
+      note.style.color = "#7ddecf";
+      note.textContent = "Subscribed. The next Architectural Dispatch will reach this desk.";
+      form.reset();
+      setTimeout(() => {
+        window.location.href = "404.html";
+      }, 1200);
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/motion.js"></script>
+</body>
+</html>

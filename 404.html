@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly — Page not found</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+</head>
+<body class="missing">
+  <main class="missing__main">
+    <p class="missing__code">404</p>
+    <h1>This page isn’t here</h1>
+    <p>That address doesn’t match a room in the house. Go back to where you were, or return to the front door.</p>
+    <div class="missing__actions">
+      <button class="btn btn--dark" type="button" id="go-back">Go back</button>
+      <a class="btn btn--line" href="index.html">Return home</a>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/motion.js"></script>
+  <script>
+    document.getElementById("go-back").addEventListener("click", () => {
+      let sameSite = false;
+      if (document.referrer) {
+        try {
+          sameSite = new URL(document.referrer).origin === location.origin;
+        } catch (error) {
+          sameSite = false;
+        }
+      }
+      if (sameSite) history.back();
+      else location.href = "index.html";
+    });
+  </script>
+</body>
+</html>

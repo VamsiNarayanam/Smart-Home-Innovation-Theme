@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly — Residence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+</head>
+<body class="dash">
+  <div class="shell">
+    <div class="backdrop"></div>
+    <aside class="sidebar" id="sidebar">
+      <a class="sidebar__logo" href="client.html" aria-label="Residence dashboard">
+        <img src="Images/Stackly-logo.webp" alt="Stackly">
+      </a>
+      <p class="sidebar__kicker">Residence</p>
+      <nav class="side-nav" aria-label="Client">
+        <button class="is-active" type="button" role="tab" aria-selected="true" data-panel="overview" data-title="Hillside Villa" data-sub="Los Angeles · All systems nominal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11.5 12 4l8 7.5V20a1 1 0 0 1-1 1h-5.2v-6.2H10.2V21H5a1 1 0 0 1-1-1v-8.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          Overview
+        </button>
+        <button type="button" role="tab" aria-selected="false" data-panel="rooms" data-title="Rooms" data-sub="Eight spaces on the hillside bus">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13.5" y="3.5" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="3.5" y="13.5" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13.5" y="13.5" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          Rooms
+        </button>
+        <button type="button" role="tab" aria-selected="false" data-panel="lighting" data-title="Lighting" data-sub="Circadian scenes and keypad states">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 3.2v2.2M12 18.6v2.2M3.2 12h2.2M18.6 12h2.2M5.6 5.6l1.6 1.6M16.8 16.8l1.6 1.6M18.4 5.6l-1.6 1.6M7.2 16.8l-1.6 1.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          Lighting
+        </button>
+        <button type="button" role="tab" aria-selected="false" data-panel="climate" data-title="Climate" data-sub="Radiant floors and air quality">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4.5h4v8.2a3.2 3.2 0 1 1-4 0V4.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          Climate
+        </button>
+        <button type="button" role="tab" aria-selected="false" data-panel="security" data-title="Security" data-sub="Armed home · perimeter quiet">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.4 5.4 6.1v5.5c0 4.1 2.7 7 6.6 8.4 3.9-1.4 6.6-4.3 6.6-8.4V6.1L12 3.4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          Security
+        </button>
+        <button type="button" role="tab" aria-selected="false" data-panel="support" data-title="Support" data-sub="Concierge for Hillside Villa">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13.5a7 7 0 0 1 14 0" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="3.5" y="13" width="3.6" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="16.9" y="13" width="3.6" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          Support
+        </button>
+      </nav>
+      <div class="sidebar__foot">
+        <div class="sidebar__user">
+          <span class="sidebar__avatar" id="dash-avatar">ER</span>
+          <div>
+            <strong id="dash-name">Elena Rostova</strong>
+            <span id="dash-role">Homeowner</span>
+          </div>
+        </div>
+        <a href="login.html" id="dash-signout">Sign out</a>
+      </div>
+    </aside>
+
+    <div class="workspace">
+      <header class="topbar">
+        <button class="dash-toggle" type="button" aria-expanded="false" aria-controls="sidebar">
+          <span class="sr-only">Menu</span>
+          <span></span><span></span><span></span>
+        </button>
+        <div>
+          <h1>Hillside Villa</h1>
+          <p>Los Angeles · All systems nominal</p>
+        </div>
+        <p class="topbar__status"><span class="topbar__dot" aria-hidden="true"></span>Home online</p>
+      </header>
+
+      <div class="board">
+        <section class="panel is-active" id="overview" role="tabpanel">
+          <div class="metric-row">
+            <article class="metric"><span>Climate</span><strong>72°F</strong><em>Radiant floor hold</em></article>
+            <article class="metric"><span>Lighting</span><strong>14</strong><em>Circuits in scene</em></article>
+            <article class="metric"><span>Shades</span><strong>40%</strong><em>Privacy tilt</em></article>
+            <article class="metric"><span>Energy</span><strong>18.4</strong><em>kWh since dawn</em></article>
+          </div>
+          <div class="split">
+            <section class="card-block">
+              <h2>Scenes</h2>
+              <div class="scene-row">
+                <button class="scene is-active" type="button" data-live="Good Morning is running. Shades rising, floor at 72°F, jazz in the suite.">
+                  <strong>Good Morning</strong><span>06:45 weekdays</span>
+                </button>
+                <button class="scene" type="button" data-live="Movie Night is staged. Blackout shades, 68°F, reference mix.">
+                  <strong>Movie Night</strong><span>Fri–Sat 8:30</span>
+                </button>
+                <button class="scene" type="button" data-live="Leaving Home is armed. Shades at 40%, climate setback, entry locked.">
+                  <strong>Leaving Home</strong><span>On departure</span>
+                </button>
+                <button class="scene" type="button" data-live="Good Night is settling. Shades closed, floor at 66°F, audio off.">
+                  <strong>Good Night</strong><span>10:30 daily</span>
+                </button>
+              </div>
+              <p class="note" id="scene-live" role="status">Good Morning is running. Shades rising, floor at 72°F, jazz in the suite.</p>
+            </section>
+            <section class="card-block visit-card">
+              <h2>Next visit</h2>
+              <p>Annual shade calibration and keypad firmware.</p>
+              <dl>
+                <div><dt>When</dt><dd>Thu 2 Oct, 10:00</dd></div>
+                <div><dt>Engineer</dt><dd>Mara Chen</dd></div>
+                <div><dt>Scope</dt><dd>West glass, suite keypads</dd></div>
+              </dl>
+            </section>
+          </div>
+          <section class="card-block">
+            <h2>This afternoon</h2>
+            <ul class="room-list">
+              <li><span>Gallery lighting tracked the west sun</span><span class="pill">Lighting</span></li>
+              <li><span>Kitchen air returned to 420 ppm</span><span class="pill">Climate</span></li>
+              <li><span>Drive gate closed after the 2:10 arrival</span><span class="pill">Access</span></li>
+              <li><span>Study occupancy kept wired network priority for calls</span><span class="pill">Network</span></li>
+              <li><span>Guest suite held at vacant setback 68°F</span><span class="pill">Climate</span></li>
+            </ul>
+          </section>
+          <div class="split">
+            <section class="card-block">
+              <h2>System health</h2>
+              <ul class="room-list">
+                <li><span>Local processor</span><span class="pill">Online</span></li>
+                <li><span>KNX bus</span><span class="pill">Quiet</span></li>
+                <li><span>Internet failover</span><span class="pill">Ready</span></li>
+                <li><span>Backup battery</span><span class="pill">94%</span></li>
+              </ul>
+            </section>
+            <section class="card-block">
+              <h2>Energy today</h2>
+              <ul class="room-list">
+                <li><span>Whole home since dawn</span><span class="pill">18.4 kWh</span></li>
+                <li><span>Lighting share</span><span class="pill">4.2 kWh</span></li>
+                <li><span>Climate share</span><span class="pill">9.1 kWh</span></li>
+                <li><span>Vs typical weekday</span><span class="pill">−6%</span></li>
+              </ul>
+            </section>
+          </div>
+        </section>
+
+        <section class="panel" id="rooms" role="tabpanel">
+          <div class="metric-row">
+            <article class="metric"><span>Spaces</span><strong>8</strong><em>On the hillside bus</em></article>
+            <article class="metric"><span>Occupied</span><strong>3</strong><em>Suite · kitchen · study</em></article>
+            <article class="metric"><span>Shades</span><strong>40%</strong><em>Average tilt</em></article>
+            <article class="metric"><span>Audio</span><strong>1</strong><em>Zone playing</em></article>
+          </div>
+          <div class="zone-grid">
+            <article class="zone card-block">
+              <h3>Master suite</h3>
+              <p>Floor 72°F · shades rising · jazz low</p>
+              <ul class="room-list">
+                <li><span>Occupancy</span><span class="pill">Present</span></li>
+                <li><span>Scene</span><span class="pill">Good Morning</span></li>
+              </ul>
+            </article>
+            <article class="zone card-block">
+              <h3>Gallery</h3>
+              <p>Cove light at 2700K · art spots off</p>
+              <ul class="room-list">
+                <li><span>Occupancy</span><span class="pill">Quiet</span></li>
+                <li><span>West sun track</span><span class="pill">Active</span></li>
+              </ul>
+            </article>
+            <article class="zone card-block">
+              <h3>Kitchen</h3>
+              <p>Task light on · exhaust idle · CO₂ 420 ppm</p>
+              <ul class="room-list">
+                <li><span>Occupancy</span><span class="pill">Present</span></li>
+                <li><span>Appliance bus</span><span class="pill">Nominal</span></li>
+              </ul>
+            </article>
+            <article class="zone card-block">
+              <h3>Living</h3>
+              <p>Day scene · speakers muted · shade at 45%</p>
+              <ul class="room-list">
+                <li><span>Occupancy</span><span class="pill">Quiet</span></li>
+                <li><span>Climate</span><span class="pill">71°F</span></li>
+              </ul>
+            </article>
+            <article class="zone card-block">
+              <h3>Entry</h3>
+              <p>Path light dusk schedule · lock secure</p>
+              <ul class="room-list">
+                <li><span>Door</span><span class="pill">Locked</span></li>
+                <li><span>Last arrival</span><span class="pill">2:10 pm</span></li>
+              </ul>
+            </article>
+            <article class="zone card-block">
+              <h3>Study</h3>
+              <p>Desk lamp off · shade at 30% · focus scene ready</p>
+              <ul class="room-list">
+                <li><span>Occupancy</span><span class="pill">Present</span></li>
+                <li><span>Network</span><span class="pill">Wired</span></li>
+              </ul>
+            </article>
+            <article class="zone card-block">
+              <h3>Guest suite</h3>
+              <p>Vacant hold · floor 68°F · shades closed</p>
+              <ul class="room-list">
+                <li><span>Occupancy</span><span class="pill">Vacant</span></li>
+                <li><span>Setback</span><span class="pill">Armed</span></li>
+              </ul>
+            </article>
+            <article class="zone card-block">
+              <h3>Terrace</h3>
+              <p>Landscape path off until dusk · fountain schedule idle</p>
+              <ul class="room-list">
+                <li><span>Irrigation</span><span class="pill pill--wait">05:30</span></li>
+                <li><span>Outdoor audio</span><span class="pill">Off</span></li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel" id="lighting" role="tabpanel">
+          <div class="metric-row">
+            <article class="metric"><span>Circuits on</span><strong>14</strong><em>Of 42 total</em></article>
+            <article class="metric"><span>Colour temp</span><strong>3000K</strong><em>Day scene average</em></article>
+            <article class="metric"><span>Energy today</span><strong>4.2</strong><em>kWh lighting</em></article>
+            <article class="metric"><span>Next change</span><strong>18:40</strong><em>Amber evening</em></article>
+          </div>
+          <div class="split">
+            <section class="card-block">
+              <h2>Keypad scenes</h2>
+              <ul class="room-list">
+                <li><span>Day — whole house</span><span class="pill">Active</span></li>
+                <li><span>Amber evening</span><span class="pill pill--wait">Scheduled 18:40</span></li>
+                <li><span>Night path</span><span class="pill pill--wait">After 22:30</span></li>
+                <li><span>Gallery exhibition</span><span class="pill">Ready</span></li>
+                <li><span>Dining entertain</span><span class="pill">Ready</span></li>
+                <li><span>All off / away</span><span class="pill">Ready</span></li>
+              </ul>
+            </section>
+            <section class="card-block">
+              <h2>Circuit groups</h2>
+              <ul class="room-list">
+                <li><span>Suite cove + reading</span><span class="pill">35%</span></li>
+                <li><span>Gallery cove 2700K</span><span class="pill">40%</span></li>
+                <li><span>Kitchen task</span><span class="pill">80%</span></li>
+                <li><span>Living pendants</span><span class="pill">Off</span></li>
+                <li><span>Entry path</span><span class="pill pill--wait">Dusk</span></li>
+                <li><span>Terrace landscape</span><span class="pill pill--wait">Dusk</span></li>
+              </ul>
+            </section>
+          </div>
+          <section class="card-block">
+            <h2>Today’s lighting log</h2>
+            <ul class="room-list">
+              <li><span>06:45 — Good Morning raised suite and kitchen to Day</span><span class="pill">Scene</span></li>
+              <li><span>11:20 — Gallery tracked west sun; cove warmed to 2700K</span><span class="pill">Auto</span></li>
+              <li><span>14:05 — Study desk lamp left off after occupancy clear</span><span class="pill">Sensor</span></li>
+              <li><span>18:40 — Amber evening will lower colour temp house-wide</span><span class="pill pill--wait">Queued</span></li>
+            </ul>
+          </section>
+        </section>
+
+        <section class="panel" id="climate" role="tabpanel">
+          <div class="metric-row">
+            <article class="metric"><span>Suite</span><strong>72°F</strong><em>Setpoint matched</em></article>
+            <article class="metric"><span>Living</span><strong>71°F</strong><em>Within 0.5°</em></article>
+            <article class="metric"><span>Kitchen</span><strong>420</strong><em>ppm CO₂</em></article>
+            <article class="metric"><span>Humidity</span><strong>44%</strong><em>Whole house</em></article>
+          </div>
+          <div class="split">
+            <section class="card-block">
+              <h2>Zones</h2>
+              <ul class="room-list">
+                <li><span>Radiant floor, sleeping rooms</span><span class="pill">72°F</span></li>
+                <li><span>Linear diffusers, living volume</span><span class="pill">71°F</span></li>
+                <li><span>Kitchen make-up air</span><span class="pill">Idle</span></li>
+                <li><span>Guest suite vacant hold</span><span class="pill">68°F</span></li>
+                <li><span>Away setback</span><span class="pill pill--wait">Arms with Leaving Home</span></li>
+              </ul>
+            </section>
+            <section class="card-block">
+              <h2>Outdoor &amp; air quality</h2>
+              <ul class="room-list">
+                <li><span>Outside air</span><span class="pill">78°F</span></li>
+                <li><span>Filter life</span><span class="pill">72%</span></li>
+                <li><span>Whole-house VOC</span><span class="pill">Low</span></li>
+                <li><span>Kitchen recovery after cooking</span><span class="pill">Complete</span></li>
+              </ul>
+            </section>
+          </div>
+          <section class="card-block">
+            <h2>Schedule</h2>
+            <div class="table-wrap">
+              <table class="data">
+                <thead>
+                  <tr><th>Time</th><th>Zone</th><th>Action</th><th>Status</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>06:30</td><td>Suite floor</td><td>Ramp to 72°F</td><td><span class="pill">Done</span></td></tr>
+                  <tr><td>09:00</td><td>Living</td><td>Hold 71°F</td><td><span class="pill">Active</span></td></tr>
+                  <tr><td>Departure</td><td>Whole house</td><td>Setback 68°F</td><td><span class="pill pill--wait">With Leaving Home</span></td></tr>
+                  <tr><td>22:30</td><td>Sleeping rooms</td><td>Floor to 66°F</td><td><span class="pill pill--wait">Queued</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <section class="panel" id="security" role="tabpanel">
+          <div class="metric-row">
+            <article class="metric"><span>Mode</span><strong>Stay</strong><em>Perimeter armed</em></article>
+            <article class="metric"><span>Doors</span><strong>All</strong><em>Locked</em></article>
+            <article class="metric"><span>Cameras</span><strong>6</strong><em>Recording</em></article>
+            <article class="metric"><span>Last event</span><strong>2:10</strong><em>Gate closed</em></article>
+          </div>
+          <div class="split">
+            <section class="card-block">
+              <h2>House state</h2>
+              <ul class="room-list">
+                <li><span>Perimeter</span><span class="pill">Armed stay</span></li>
+                <li><span>Front door &amp; garage</span><span class="pill">Locked</span></li>
+                <li><span>Gate</span><span class="pill">Closed</span></li>
+                <li><span>Intercom</span><span class="pill">Online</span></li>
+                <li><span>Panic / medical</span><span class="pill">Ready</span></li>
+              </ul>
+            </section>
+            <section class="card-block">
+              <h2>Camera &amp; sensors</h2>
+              <ul class="room-list">
+                <li><span>Drive &amp; gate</span><span class="pill">Clear</span></li>
+                <li><span>Entry canopy</span><span class="pill">Clear</span></li>
+                <li><span>Terrace</span><span class="pill">Clear</span></li>
+                <li><span>Garage interior</span><span class="pill">Clear</span></li>
+                <li><span>Glass break · west gallery</span><span class="pill">Quiet</span></li>
+              </ul>
+            </section>
+          </div>
+          <section class="card-block">
+            <h2>Recent access</h2>
+            <ul class="room-list">
+              <li><span>2:10 pm — Drive gate opened for known plate, then closed</span><span class="pill">Access</span></li>
+              <li><span>11:48 am — Front door unlocked from suite keypad</span><span class="pill">Access</span></li>
+              <li><span>06:52 am — Perimeter shifted from Night to Stay after Good Morning</span><span class="pill">Mode</span></li>
+              <li><span>Yesterday 10:14 pm — Garage closed; all zones secured</span><span class="pill">Night</span></li>
+            </ul>
+          </section>
+        </section>
+
+        <section class="panel" id="support" role="tabpanel">
+          <div class="metric-row">
+            <article class="metric"><span>Open</span><strong>2</strong><em>With the studio</em></article>
+            <article class="metric"><span>Next visit</span><strong>Thu</strong><em>2 Oct · 10:00</em></article>
+            <article class="metric"><span>Engineer</span><strong>Mara</strong><em>Chen on site</em></article>
+            <article class="metric"><span>Plan</span><strong>Concierge</strong><em>Same-day field</em></article>
+          </div>
+          <div class="split">
+            <section class="card-block">
+              <h2>Open with the studio</h2>
+              <ul class="ticket-list">
+                <li><span>Shade calibration, west glass</span><span class="pill pill--wait">Thu 2 Oct</span></li>
+                <li><span>Suite keypad firmware</span><span class="pill pill--wait">With the visit</span></li>
+              </ul>
+            </section>
+            <form class="card-block" id="support-form">
+              <h2>New request</h2>
+              <label class="sr-only" for="support-message">Request</label>
+              <textarea class="support-box" id="support-message" rows="5" placeholder="What should the house do differently?"></textarea>
+              <button class="btn btn--dark" type="submit">Send to concierge</button>
+              <p class="note" id="support-note" role="status"></p>
+            </form>
+          </div>
+          <section class="card-block">
+            <h2>Recently closed</h2>
+            <ul class="ticket-list">
+              <li><span>Kitchen exhaust scene timing adjusted</span><span class="pill">Closed</span></li>
+              <li><span>Guest thermostat schedule corrected</span><span class="pill">Closed</span></li>
+              <li><span>Gallery art-spot recall restored</span><span class="pill">Closed</span></li>
+            </ul>
+          </section>
+          <div class="split">
+            <section class="card-block visit-card">
+              <h2>Thursday visit details</h2>
+              <p>Annual shade calibration and keypad firmware for the suite.</p>
+              <dl>
+                <div><dt>When</dt><dd>Thu 2 Oct, 10:00–12:30</dd></div>
+                <div><dt>Engineer</dt><dd>Mara Chen</dd></div>
+                <div><dt>Scope</dt><dd>West glass motors, suite keypads, walkthrough notes</dd></div>
+                <div><dt>Access</dt><dd>Gate code already on file</dd></div>
+              </dl>
+            </section>
+            <section class="card-block">
+              <h2>Concierge contacts</h2>
+              <ul class="room-list">
+                <li><span>Studio desk</span><span class="pill">+1 (800) 492-STCK</span></li>
+                <li><span>After-hours</span><span class="pill">priority queue</span></li>
+                <li><span>Email summaries</span><span class="pill">Preferred</span></li>
+                <li><span>Typical reply</span><span class="pill">Under 1 hour</span></li>
+              </ul>
+            </section>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/dash.js"></script>
+  <script src="js/motion.js"></script>
+</body>
+</html>

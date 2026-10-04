@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly — Contact</title>
+  <meta name="description" content="Request a project consultation with Stackly spatial engineers — virtual reviews, studio visits, and drawing intake for architectural homes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+</head>
+<body>
+  <header class="header" id="top">
+    <div class="header__inner">
+      <a class="logo" href="index.html" aria-label="Stackly home">
+        <img src="Images/Stackly-logo.webp" alt="Stackly">
+      </a>
+      <nav class="nav" id="site-nav">
+        <a href="index.html#top">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" aria-current="page">Contact Us</a>
+        <a href="blogs.html">Blogs</a>
+        <a class="nav__signin" href="login.html">Sign in</a>
+      </nav>
+      <a class="header__signin" href="login.html">Sign in</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Menu</span>
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="contact">
+    <section class="ct-hero">
+      <div class="ct-wrap">
+        <p class="ct-kicker"><i aria-hidden="true"></i>Start a project // Contact &amp; commissions</p>
+        <h1>Connect With Our Spatial<br>Engineers.</h1>
+        <p class="ct-hero__copy">Bring drawings, a site, or a residence already under way. We review light, climate, security, and the low-voltage spine with your design team — and answer with a technical path before finishes lock.</p>
+        <ul class="ct-channels">
+          <li>
+            <div class="ct-channel">
+              <span class="ct-channel__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v4.4l2.6 1.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span>
+                <strong>&lt; 4h SLA</strong>
+                <span>Initial technical review</span>
+              </span>
+            </div>
+          </li>
+          <li>
+            <div class="ct-channel">
+              <span class="ct-channel__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3.8 5.5 6.4v5.2c0 4.2 2.8 7.2 6.5 8.6 3.7-1.4 6.5-4.4 6.5-8.6V6.4L12 3.8Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="m9.2 12 1.8 1.8 3.8-3.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span>
+                <strong>100% NDA</strong>
+                <span>Privacy &amp; drawing security</span>
+              </span>
+            </div>
+          </li>
+          <li>
+            <div class="ct-channel">
+              <span class="ct-channel__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3.5 13.6 6l2.8.5-2 2.2.4 2.9L12 10.3 9.2 11.6l.4-2.9-2-2.2L10.4 6 12 3.5Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><circle cx="12" cy="15.6" r="4.2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m10.3 15.6 1.3 1.3 2.4-2.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span>
+                <strong>Partner Access</strong>
+                <span>Direct low-voltage lead</span>
+              </span>
+            </div>
+          </li>
+        </ul>
+        <figure class="ct-shot">
+          <img src="Images/contact-hero.webp?v=crisp" alt="Design team reviewing architectural drawings and conduits around a studio table" width="2560" height="1440" decoding="async" fetchpriority="high">
+          <figcaption class="ct-plate">
+            <div class="ct-plate__copy">
+              <span>Collaboration Desk</span>
+              <strong>Design Team Conduit &amp; Topology Coordination</strong>
+            </div>
+            <div class="ct-plate__badge"><i aria-hidden="true"></i>Active Sessions</div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="ct-band" id="consult">
+      <div class="ct-wrap ct-layout">
+        <form class="ct-form" id="consult-form" novalidate>
+          <div class="ct-form__head">
+            <div>
+              <p class="ct-eyebrow">Specification Protocol // Intake</p>
+              <h2>Project Consultation Request</h2>
+            </div>
+            <span class="ct-step">Step 1 of 2</span>
+          </div>
+
+          <div class="ct-block">
+            <p class="ct-block__label">Project Classification</p>
+            <div class="ct-class" role="group" aria-label="Project classification">
+              <button type="button" class="ct-class__btn" aria-pressed="true" data-kind="Private Residence">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 11.2 12 5.2l7.5 6V19a1 1 0 0 1-1 1h-4.2v-5.2H9.7V20H5.5a1 1 0 0 1-1-1v-7.8Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                <span>Private Residence</span>
+              </button>
+              <button type="button" class="ct-class__btn" aria-pressed="false" data-kind="Commercial Pavilion">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V7.5L12 4l7 3.5V20M9 20v-5h6v5M8 10.5h2M14 10.5h2M8 13.5h2M14 13.5h2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Commercial Pavilion</span>
+              </button>
+              <button type="button" class="ct-class__btn" aria-pressed="false" data-kind="Marine / Multi-Dwelling">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 17.5c1.2-1 2.6-1.5 4-1.5s2.8.5 4 1.5c1.2-1 2.6-1.5 4-1.5s2.8.5 4 1.5M7 15.2 12 5.5l5.5 9.7M12 5.5v9.7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Marine / Multi-Dwelling</span>
+              </button>
+              <button type="button" class="ct-class__btn" aria-pressed="false" data-kind="Heritage Retrofit">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 19.5 14.2 5.8l3.2 1.8-7.7 13.7-3.2-.8Zm7.4-12.4 3.2 1.8M8.2 16.8l2.2 1.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Heritage Retrofit</span>
+              </button>
+            </div>
+            <input type="hidden" name="classification" id="classification" value="Private Residence">
+          </div>
+
+          <div class="ct-block">
+            <p class="ct-block__label ct-block__label--left">Current Architectural Stage</p>
+            <div class="ct-stage" role="group" aria-label="Current architectural stage">
+              <button type="button" aria-pressed="true" data-stage="Schematic / Concept">Schematic / Concept</button>
+              <button type="button" aria-pressed="false" data-stage="Pre-Drywall">Pre-Drywall</button>
+              <button type="button" aria-pressed="false" data-stage="Active Construction">Active Construction</button>
+              <button type="button" aria-pressed="false" data-stage="Retrofit / Renovation">Retrofit / Renovation</button>
+            </div>
+            <input type="hidden" name="stage" id="stage" value="Schematic / Concept">
+          </div>
+
+          <div class="ct-fields">
+            <label class="ct-field">
+              <span>Lead Architect / Principal Name *</span>
+              <input name="name" type="text" autocomplete="name" placeholder="e.g. Julian Thorne, AIA" required>
+            </label>
+            <label class="ct-field">
+              <span>Architecture Studio / Practice / GC</span>
+              <input name="studio" type="text" autocomplete="organization" placeholder="e.g. Studio Olson Architecture">
+            </label>
+            <label class="ct-field">
+              <span>Work Email Address *</span>
+              <input name="email" type="email" autocomplete="email" placeholder="name@architectfirm.com" required>
+            </label>
+            <label class="ct-field">
+              <span>Direct Telephone *</span>
+              <input name="phone" type="tel" autocomplete="tel" placeholder="+1 (415) 800-0192" required>
+            </label>
+            <label class="ct-field">
+              <span>Project Geographic Location</span>
+              <input name="location" type="text" autocomplete="address-level2" placeholder="e.g. Carmel-by-the-Sea, California">
+            </label>
+            <label class="ct-field">
+              <span>Estimated Conditioned Area (Sq Ft / M²)</span>
+              <select name="area">
+                <option>5,000 – 10,000 sq ft (Primary Residence)</option>
+                <option>Under 5,000 sq ft</option>
+                <option>10,000 – 20,000 sq ft</option>
+                <option>20,000+ sq ft / Estate</option>
+                <option>Multi-unit / Marine</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="ct-block" id="drawings">
+            <p class="ct-block__label ct-block__label--left">Architectural Drawings / CAD / Revit Upload (Optional)</p>
+            <label class="ct-drop" id="drop">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.5V5.8M8.6 8.6 12 5.2l3.4 3.4M6 15.5v2.7a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-2.7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <strong id="file-label">Click to upload schematics or drag &amp; drop files</strong>
+              <span>PDF, DWG, RVT, IFC up to 150MB // Secure end-to-end storage</span>
+              <input id="drawings-input" name="drawings" type="file" multiple accept=".pdf,.dwg,.rvt,.ifc,.png,.jpg,.jpeg">
+            </label>
+          </div>
+
+          <label class="ct-brief">
+            <span>System Focus &amp; Technical Considerations</span>
+            <textarea name="brief" placeholder="Describe specific technical requirements, preferred protocols (KNX, Crestron, Control4, Lutron), ceiling void constraints, heritage restrictions, or DALI-2 lighting ambitions..."></textarea>
+          </label>
+
+          <div class="ct-form__foot">
+            <p class="ct-nda">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="9" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 10.5V8.2a4 4 0 0 1 8 0v2.3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+              Protected by mutual architectural non-disclosure protocol
+            </p>
+            <button class="ct-submit" type="submit">Request Consultation &amp; Technical Review →</button>
+            <p class="ct-note" id="consult-note" role="status"></p>
+          </div>
+        </form>
+
+        <aside class="ct-side">
+          <article class="ct-desk-intro">
+            <p class="ct-side__kicker">Direct Contact Desks</p>
+            <p>Direct unmediated lines to senior project leads and low-voltage field engineers.</p>
+          </article>
+
+          <article class="ct-desk">
+            <svg class="ct-desk__ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 3.5v2.2M12 18.3v2.2M3.5 12h2.2M18.3 12h2.2M6.2 6.2l1.6 1.6M16.2 16.2l1.6 1.6M17.8 6.2l-1.6 1.6M7.8 16.2l-1.6 1.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <p class="ct-side__kicker">AIA / RIBA Specifications</p>
+            <h3>Architectural &amp; Specification Desk</h3>
+            <p>For conduit routing, bus topology, and electrical engineering coordination during DD / CD phases.</p>
+            <ul class="ct-desk__links">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m5 7.5 7 5.2 7-5.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                <a href="404.html">specs@stackly.arch</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.2 4.8h2.2l1.2 2.8-1.5 1a11 11 0 0 0 5.3 5.3l1-1.5 2.8 1.2v2.2a1.4 1.4 0 0 1-1.5 1.4A13.2 13.2 0 0 1 6.8 6.3a1.4 1.4 0 0 1 1.4-1.5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                <a href="404.html">+1 (800) 492-STCK · Ext. 01</a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="ct-desk">
+            <svg class="ct-desk__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5 17 4l3 3-2.5 2.5M14.5 6.5 5.8 15.2 4.5 19.5l4.3-1.3L17 9.5M14.5 6.5 17 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            <p class="ct-side__kicker">Site Runtime Coordination</p>
+            <h3>General Contractor Operations</h3>
+            <p>Direct line for rough-in schedules, pre-drywall inspections, and on-site commissioning logistics.</p>
+            <ul class="ct-desk__links">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m5 7.5 7 5.2 7-5.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                <a href="404.html">ops@stackly.arch</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.2 4.8h2.2l1.2 2.8-1.5 1a11 11 0 0 0 5.3 5.3l1-1.5 2.8 1.2v2.2a1.4 1.4 0 0 1-1.5 1.4A13.2 13.2 0 0 1 6.8 6.3a1.4 1.4 0 0 1 1.4-1.5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                <a href="404.html">+1 (800) 492-STCK · Ext. 04</a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="ct-desk">
+            <svg class="ct-desk__ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5.5 19.2c1.2-3 3.5-4.5 6.5-4.5s5.3 1.5 6.5 4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <p class="ct-side__kicker">Private Clients &amp; Estates</p>
+            <h3>Client Concierge &amp; Commissioning</h3>
+            <p>White-glove coordination for principals and family offices. Resident profile calibration and lifestyle programming.</p>
+            <ul class="ct-desk__links">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m5 7.5 7 5.2 7-5.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                <a href="404.html">concierge@stackly.arch</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.2 4.8h2.2l1.2 2.8-1.5 1a11 11 0 0 0 5.3 5.3l1-1.5 2.8 1.2v2.2a1.4 1.4 0 0 1-1.5 1.4A13.2 13.2 0 0 1 6.8 6.3a1.4 1.4 0 0 1 1.4-1.5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                <a href="404.html">+1 (800) 492-STCK · Ext. 09</a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="ct-telemetry">
+            <div class="ct-telemetry__top">
+              <p class="ct-telemetry__label"><i aria-hidden="true"></i>Core Telemetry</p>
+              <span>Live Status</span>
+            </div>
+            <h3>All Systems Operational</h3>
+            <p>24/7 global infrastructure monitoring. Average architectural desk response: 2.4 hours.</p>
+          </article>
+        </aside>
+      </div>
+    </section>
+
+    <section class="ct-expect" id="review">
+      <div class="ct-wrap">
+        <div class="ct-expect__head">
+          <p class="ct-kicker">Transparent Collaboration</p>
+          <h2>What to Expect During Initial Technical Review</h2>
+          <p>From receipt of initial floor plans to signed off electrical wiring submittals, our four-stage engagement is architecturally synchronized.</p>
+        </div>
+        <div class="ct-phases">
+          <article class="ct-phase">
+            <div class="ct-phase__top">
+              <span>Stage 01</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.8h7.2L18.2 8v12.2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4.8a1 1 0 0 1 1-1Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M14 3.8V8h4.2M8.6 12.2h6.8M8.6 15.6h4.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Schematic Assessment</h3>
+            <p>Preliminary audit of CAD/Revit prints. We assess electrical risers, mechanical spaces, and cable pathways.</p>
+            <footer>Turnaround: 48 Hours</footer>
+          </article>
+          <article class="ct-phase">
+            <div class="ct-phase__top">
+              <span>Stage 02</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.8 10.5a7.2 7.2 0 0 1 14.4 0v2.2a2 2 0 0 1-2 2h-.6v-4.4a4.6 4.6 0 0 0-9.2 0v4.4h-.6a2 2 0 0 1-2-2v-2.2Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9.2 18.2a2.8 2.8 0 0 0 5.6 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Systems Discovery Call</h3>
+            <p>30-minute structured technical session with the Lead Architectural Engineer and interior design team.</p>
+            <footer>Video Conference or Lab</footer>
+          </article>
+          <article class="ct-phase">
+            <div class="ct-phase__top">
+              <span>Stage 03</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6.5" cy="7" r="2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="7" r="2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="17" r="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8.3 8.4 10.7 15.2M15.7 8.4 13.3 15.2M8.5 7h7" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+            </div>
+            <h3>Topology &amp; Budget</h3>
+            <p>Engineered equipment allocation, KNX / DALI bus topology schematic, and transparent line-item investment schedule.</p>
+            <footer>Detailed Specification Pack</footer>
+          </article>
+          <article class="ct-phase">
+            <div class="ct-phase__top">
+              <span>Stage 04</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4.2" width="14" height="15.6" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8.2 9.2h7.6M8.2 12.6h7.6M8.2 16h3.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M15.2 15.2l1.2 1.2 2.2-2.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>GC Pre-Drywall Walk</h3>
+            <p>On-site laser inspection and coordination with electrical contractors prior to wall close-in.</p>
+            <footer>Physical Site Benchmark</footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ct-studios" id="studios">
+      <div class="ct-wrap">
+        <div class="ct-head ct-head--studio">
+          <div class="ct-head__row">
+            <p class="ct-kicker">Global footprint</p>
+            <p class="ct-head__note">Private in-person consultations by appointment only</p>
+          </div>
+          <h2>Design Studios &amp; Consultation Ateliers</h2>
+        </div>
+        <div class="ct-studios__grid">
+          <article class="ct-studio">
+            <div class="ct-studio__top"><span>Headquarters // Global HQ</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s5.5-4.6 5.5-9a5.5 5.5 0 1 0-11 0c0 4.4 5.5 9 5.5 9Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="11" r="1.6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            </div>
+            <h3>Headquarters</h3>
+            <address>MMR Complex, Chinna Thirupathi,<br>near Chinna Muniyappan Kovil,<br>Salem, Tamil Nadu 636008</address>
+            <ul class="ct-studio__meta">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.2 4.8h2.2l1.2 2.8-1.5 1a11 11 0 0 0 5.3 5.3l1-1.5 2.8 1.2v2.2a1.4 1.4 0 0 1-1.5 1.4A13.2 13.2 0 0 1 6.8 6.3a1.4 1.4 0 0 1 1.4-1.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><a href="tel:+919488212345">+91 94882 12345</a></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="5.5" width="15" height="14" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 9.5h15M8 4.5v3M16 4.5v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Mon – Sat: 09:00 – 18:30 IST</span></li>
+            </ul>
+            <footer><a href="404.html">Book Studio Visit →</a></footer>
+          </article>
+          <article class="ct-studio">
+            <div class="ct-studio__top"><span>Karnataka tech corridor</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s5.5-4.6 5.5-9a5.5 5.5 0 1 0-11 0c0 4.4 5.5 9 5.5 9Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="11" r="1.6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            </div>
+            <h3>Bengaluru Branch Office</h3>
+            <address>Evolve Studio, 4th Floor, Khata No 10,<br>Begur - Koppa Rd, in front of SNN Raj Serenity, Suraksha Nagar,<br>Yelenahalli, Begur,<br>Bengaluru, Karnataka - 560068</address>
+            <ul class="ct-studio__meta">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.2 4.8h2.2l1.2 2.8-1.5 1a11 11 0 0 0 5.3 5.3l1-1.5 2.8 1.2v2.2a1.4 1.4 0 0 1-1.5 1.4A13.2 13.2 0 0 1 6.8 6.3a1.4 1.4 0 0 1 1.4-1.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><a href="tel:+918049208800">+91 80 4920 8800</a></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="5.5" width="15" height="14" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 9.5h15M8 4.5v3M16 4.5v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Mon – Fri: 09:30 – 18:30 IST</span></li>
+            </ul>
+            <footer><a href="404.html">Book Studio Visit →</a></footer>
+          </article>
+          <article class="ct-studio">
+            <div class="ct-studio__top"><span>Telangana tech hub</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s5.5-4.6 5.5-9a5.5 5.5 0 1 0-11 0c0 4.4 5.5 9 5.5 9Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="11" r="1.6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            </div>
+            <h3>Hyderabad Phase II Branch Office</h3>
+            <address>4th floor, R.R. Towers,<br>Plot No. 188 &amp; 189, Kavuri Hills,<br>Madhapur,<br>Hyderabad – 500033</address>
+            <ul class="ct-studio__meta">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.2 4.8h2.2l1.2 2.8-1.5 1a11 11 0 0 0 5.3 5.3l1-1.5 2.8 1.2v2.2a1.4 1.4 0 0 1-1.5 1.4A13.2 13.2 0 0 1 6.8 6.3a1.4 1.4 0 0 1 1.4-1.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><a href="tel:+914068204400">+91 40 6820 4400</a></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="5.5" width="15" height="14" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 9.5h15M8 4.5v3M16 4.5v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Mon – Fri: 09:00 – 18:30 IST</span></li>
+            </ul>
+            <footer><a href="404.html">Book Studio Visit →</a></footer>
+          </article>
+          <article class="ct-studio">
+            <div class="ct-studio__top"><span>Tamil Nadu operations</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s5.5-4.6 5.5-9a5.5 5.5 0 1 0-11 0c0 4.4 5.5 9 5.5 9Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="11" r="1.6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            </div>
+            <h3>Coimbatore Branch Office</h3>
+            <address>Stackly, 79 Aiswarya Complex,<br>Nethaji Road, PN Palayam,<br>Coimbatore,<br>Tamil Nadu, India - 641037</address>
+            <ul class="ct-studio__meta">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.2 4.8h2.2l1.2 2.8-1.5 1a11 11 0 0 0 5.3 5.3l1-1.5 2.8 1.2v2.2a1.4 1.4 0 0 1-1.5 1.4A13.2 13.2 0 0 1 6.8 6.3a1.4 1.4 0 0 1 1.4-1.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><a href="tel:+914222451090">+91 422 245 1090</a></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="5.5" width="15" height="14" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 9.5h15M8 4.5v3M16 4.5v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Mon – Sat: 09:00 – 18:00 IST</span></li>
+            </ul>
+            <footer><a href="404.html">Book Studio Visit →</a></footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ct-faq" id="inquiries">
+      <div class="ct-wrap">
+        <div class="ct-head">
+          <div>
+            <p class="ct-kicker">Technical advisory</p>
+            <h2>Frequently Addressed Inquiries</h2>
+          </div>
+        </div>
+        <div class="ct-faq__grid">
+          <article class="ct-faq__item">
+            <h3>When in the architectural schedule should STACKLY be engaged? <span aria-hidden="true">?</span></h3>
+            <p>Ideally during the schematic design phase or early design development (DD). Early involvement allows us to preserve ceiling depths for recessed motorized drapery pockets, locate centralized low-voltage equipment closets, and coordinate conduit paths before structural framing begins.</p>
+          </article>
+          <article class="ct-faq__item">
+            <h3>Do you provide stamped electrical conduit submittals? <span aria-hidden="true">?</span></h3>
+            <p>Yes. We engineer comprehensive conduit schedules, cable topology drawings, electrical box rough-in cut sheets, and load schedules directly compatible with your electrical engineering trade partners and local permitting jurisdictions.</p>
+          </article>
+          <article class="ct-faq__item">
+            <h3>Can STACKLY engineer systems for historic and stone structures? <span aria-hidden="true">?</span></h3>
+            <p>Absolutely. Our heritage retrofit engineering deploys ultra-reliable encrypted wireless backbones (Lutron Clear Connect, wireless KNX RF, and fiber-coupled distributed hubs) allowing intelligent control without chasing or compromising historic masonry.</p>
+          </article>
+          <article class="ct-faq__item">
+            <h3>What ongoing warranty and telemetry support do you offer? <span aria-hidden="true">?</span></h3>
+            <p>All STACKLY installations include our 3-Year White-Glove Architectural Guarantee, including 24/7 autonomous bus health telemetry, pro-active equipment replacement, and immediate priority hotline dispatch for the client and estate managers.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ct-rush" id="priority">
+      <div class="ct-wrap ct-rush__inner">
+        <div>
+          <p class="ct-kicker">Urgent bid or pre-drywall deadlines?</p>
+          <h2>Accelerated Architectural Review Available.</h2>
+          <p>Our rapid-response engineering desk can audit residential cable schedules, conduit runs, and low-voltage submittals within 24 hours.</p>
+        </div>
+        <div class="ct-rush__actions">
+          <a class="btn btn--light" href="404.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.2 4.8h2.2l1.2 2.8-1.5 1a11 11 0 0 0 5.3 5.3l1-1.5 2.8 1.2v2.2a1.4 1.4 0 0 1-1.5 1.4A13.2 13.2 0 0 1 6.8 6.3a1.4 1.4 0 0 1 1.4-1.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            +1 (800) 492-STCK
+          </a>
+          <a class="btn ct-rush__ghost" href="404.html">Upload Drawings →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="inquire">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" aria-label="Stackly home"><img src="Images/Stackly-logo.webp" alt="Stackly"></a>
+        <p>Intelligent residential automation engineered for modern luxury residences, private estates, and architectural masterpieces.</p>
+        <p class="footer__status-label">System status</p>
+        <p class="footer__status"><span class="footer__status-dot" aria-hidden="true"></span>All Core Telemetry Operations Nominal</p>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <a href="404.html">Circadian Lighting</a>
+        <a href="404.html">HVAC Automation</a>
+        <a href="404.html">Perimeter Security</a>
+        <a href="404.html">Acoustic Cinema</a>
+        <a href="404.html">Motorized Drapery</a>
+        <a href="404.html">Wi-Fi &amp; Fiber Core</a>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <a href="about.html">About Us</a>
+        <a href="404.html">Architectural Portfolio</a>
+        <a href="404.html">Engineering Standards</a>
+        <a href="404.html">Careers at STACKLY</a>
+        <a href="404.html">Press &amp; Publications</a>
+      </div>
+      <form class="footer__form" id="newsletter" novalidate onsubmit="return false">
+        <h3>Architectural Dispatch</h3>
+        <p>Quarterly monographs on spatial technology and residential design.</p>
+        <div class="footer__form-row">
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="architect@firm.com" required>
+          <button class="btn btn--dark" type="submit">Subscribe</button>
+        </div>
+        <p class="form-note" id="form-note" role="status"></p>
+      </form>
+    </div>
+    <div class="footer__bar">
+      <p>© <span id="year"></span> STACKLY Smart Living Inc. All architectural and engineering rights reserved.</p>
+      <div>
+        <a href="404.html">Privacy Policy</a>
+        <a href="404.html">Terms of Service</a>
+        <a href="404.html">Security Architecture</a>
+        <a href="404.html">System Status</a>
+        <a href="404.html">Accessibility</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const defaultFileLabel = "Click to upload schematics or drag & drop files";
+
+    document.querySelectorAll(".ct-class__btn").forEach((button) => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".ct-class__btn").forEach((item) => {
+          item.setAttribute("aria-pressed", String(item === button));
+        });
+        document.getElementById("classification").value = button.dataset.kind;
+      });
+    });
+
+    document.querySelectorAll(".ct-stage button").forEach((button) => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".ct-stage button").forEach((item) => {
+          item.setAttribute("aria-pressed", String(item === button));
+        });
+        document.getElementById("stage").value = button.dataset.stage;
+      });
+    });
+
+    const drawings = document.getElementById("drawings-input");
+    const fileLabel = document.getElementById("file-label");
+    const drop = document.getElementById("drop");
+
+    const syncFiles = () => {
+      const files = [...drawings.files];
+      fileLabel.textContent = files.length
+        ? files.map((file) => file.name).join(", ")
+        : defaultFileLabel;
+    };
+
+    drawings.addEventListener("change", syncFiles);
+
+    ["dragenter", "dragover"].forEach((type) => {
+      drop.addEventListener(type, (event) => {
+        event.preventDefault();
+        drop.classList.add("is-drag");
+      });
+    });
+    ["dragleave", "drop"].forEach((type) => {
+      drop.addEventListener(type, (event) => {
+        event.preventDefault();
+        drop.classList.remove("is-drag");
+      });
+    });
+    drop.addEventListener("drop", (event) => {
+      if (!event.dataTransfer?.files?.length) return;
+      const transfer = new DataTransfer();
+      [...event.dataTransfer.files].forEach((file) => transfer.items.add(file));
+      drawings.files = transfer.files;
+      syncFiles();
+    });
+
+    document.getElementById("consult-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const note = document.getElementById("consult-note");
+      const name = form.elements.name;
+      const email = form.elements.email;
+      const phone = form.elements.phone;
+      if (!name.value.trim() || !email.checkValidity() || !phone.value.trim()) {
+        note.style.color = "#8a3b32";
+        note.textContent = "Add the lead architect name, a valid work email, and direct telephone.";
+        (name.value.trim() ? (email.checkValidity() ? phone : email) : name).focus();
+        return;
+      }
+      const count = drawings.files.length;
+      note.style.color = "#128f7c";
+      note.textContent = count
+        ? "Request received with " + count + " drawing" + (count > 1 ? "s" : "") + ". A spatial engineer will reply within one business day."
+        : "Request received. A spatial engineer will reply within one business day.";
+      form.reset();
+      drawings.value = "";
+      document.querySelectorAll(".ct-class__btn").forEach((item, index) => {
+        item.setAttribute("aria-pressed", String(index === 0));
+      });
+      document.querySelectorAll(".ct-stage button").forEach((item, index) => {
+        item.setAttribute("aria-pressed", String(index === 0));
+      });
+      document.getElementById("classification").value = "Private Residence";
+      document.getElementById("stage").value = "Schematic / Concept";
+      fileLabel.textContent = defaultFileLabel;
+      setTimeout(() => {
+        window.location.href = "404.html";
+      }, 1200);
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/motion.js"></script>
+</body>
+</html>
