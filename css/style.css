@@ -3448,6 +3448,7 @@ table.data tbody tr:hover { background: #faf8f4; }
   align-items: center;
   justify-content: center;
   gap: 8px;
+  width: 100%;
   min-height: 128px;
   border: 1.5px dashed #b8c0cc;
   border-radius: 2px;
@@ -3456,8 +3457,11 @@ table.data tbody tr:hover { background: #faf8f4; }
   text-align: center;
   padding: 22px 16px;
   cursor: pointer;
+  font: inherit;
   font-size: 12px;
   letter-spacing: 0.02em;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 .ct-drop svg { width: 28px; height: 28px; color: #6b7280; }
 .ct-drop strong {
@@ -3474,9 +3478,11 @@ table.data tbody tr:hover { background: #faf8f4; }
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-.ct-drop { position: relative; }
-.ct-drop input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; font-size: 0; }
 .ct-drop.is-drag { border-color: #111318; background: #eef1f5; }
+.ct-drop:focus-visible {
+  outline: 2px solid #17897b;
+  outline-offset: 2px;
+}
 .ct-form__foot {
   margin-top: 22px;
   padding-top: 18px;

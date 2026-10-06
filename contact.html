@@ -111,7 +111,7 @@
 
     <section class="ct-band" id="consult">
       <div class="ct-wrap ct-layout">
-        <form class="ct-form" id="consult-form" novalidate>
+        <form class="ct-form" id="consult-form" action="" method="get" onsubmit="return false;" novalidate>
           <div class="ct-form__head">
             <div>
               <p class="ct-eyebrow">Specification Protocol // Intake</p>
@@ -188,13 +188,12 @@
           </div>
 
           <div class="ct-block" id="drawings">
-            <p class="ct-block__label ct-block__label--left">Architectural Drawings / CAD / Revit Upload *</p>
-            <label class="ct-drop" id="drop">
+            <p class="ct-block__label ct-block__label--left" id="drawings-label">Architectural Drawings / CAD / Revit Upload *</p>
+            <a class="ct-drop" id="drop" href="404.html" aria-labelledby="drawings-label file-label">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.5V5.8M8.6 8.6 12 5.2l3.4 3.4M6 15.5v2.7a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-2.7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <strong id="file-label">Click to upload schematics or drag &amp; drop files</strong>
               <span>PDF, DWG, RVT, IFC up to 150MB // Secure end-to-end storage</span>
-              <input id="drawings-input" name="drawings" type="file" multiple accept=".pdf,.dwg,.rvt,.ifc,.png,.jpg,.jpeg">
-            </label>
+            </a>
           </div>
 
           <label class="ct-brief">
@@ -487,8 +486,6 @@
   </footer>
 
   <script>
-    const defaultFileLabel = "Click to upload schematics or drag & drop files";
-
     document.querySelectorAll(".ct-class__btn").forEach((button) => {
       button.addEventListener("click", () => {
         document.querySelectorAll(".ct-class__btn").forEach((item) => {
@@ -505,58 +502,6 @@
         });
         document.getElementById("stage").value = button.dataset.stage;
       });
-    });
-
-    const drawings = document.getElementById("drawings-input");
-    const fileLabel = document.getElementById("file-label");
-    const drop = document.getElementById("drop");
-
-    const allowedExt = ["pdf", "dwg", "rvt", "ifc", "png", "jpg", "jpeg"];
-    const maxBytes = 150 * 1024 * 1024;
-
-    const syncFiles = () => {
-      const files = [...drawings.files];
-      fileLabel.textContent = files.length
-        ? files.map((file) => file.name).join(", ")
-        : defaultFileLabel;
-    };
-
-    const setFiles = (list) => {
-      const note = document.getElementById("consult-note");
-      const valid = [];
-      const rejected = [];
-      [...list].forEach((file) => {
-        const ext = file.name.split(".").pop().toLowerCase();
-        if (allowedExt.includes(ext) && file.size <= maxBytes) valid.push(file);
-        else rejected.push(file.name);
-      });
-      const transfer = new DataTransfer();
-      valid.forEach((file) => transfer.items.add(file));
-      drawings.files = transfer.files;
-      syncFiles();
-      note.style.color = "#8a3b32";
-      note.textContent = rejected.length
-        ? "Skipped (unsupported type or over 150MB): " + rejected.join(", ")
-        : "";
-    };
-
-    drawings.addEventListener("change", () => setFiles(drawings.files));
-
-    ["dragenter", "dragover"].forEach((type) => {
-      drop.addEventListener(type, (event) => {
-        event.preventDefault();
-        drop.classList.add("is-drag");
-      });
-    });
-    ["dragleave", "drop"].forEach((type) => {
-      drop.addEventListener(type, (event) => {
-        event.preventDefault();
-        drop.classList.remove("is-drag");
-      });
-    });
-    drop.addEventListener("drop", (event) => {
-      if (!event.dataTransfer?.files?.length) return;
-      setFiles(event.dataTransfer.files);
     });
 
     document.getElementById("consult-form").addEventListener("submit", (event) => {
@@ -580,31 +525,7 @@
           return;
         }
       }
-      if (!drawings.files.length) {
-        note.style.color = "#8a3b32";
-        note.textContent = "Upload at least one architectural drawing (PDF, DWG, RVT, IFC or image) before submitting.";
-        drop.scrollIntoView({ behavior: "smooth", block: "center" });
-        return;
-      }
-      const count = drawings.files.length;
-      note.style.color = "#128f7c";
-      note.textContent = count
-        ? "Request received with " + count + " drawing" + (count > 1 ? "s" : "") + ". A spatial engineer will reply within one business day."
-        : "Request received. A spatial engineer will reply within one business day.";
-      form.reset();
-      drawings.value = "";
-      document.querySelectorAll(".ct-class__btn").forEach((item, index) => {
-        item.setAttribute("aria-pressed", String(index === 0));
-      });
-      document.querySelectorAll(".ct-stage button").forEach((item, index) => {
-        item.setAttribute("aria-pressed", String(index === 0));
-      });
-      document.getElementById("classification").value = "Private Residence";
-      document.getElementById("stage").value = "Schematic / Concept";
-      fileLabel.textContent = defaultFileLabel;
-      setTimeout(() => {
-        window.location.href = "404.html";
-      }, 1200);
+      window.location.href = "404.html";
     });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
