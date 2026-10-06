@@ -111,7 +111,7 @@
 
     <section class="ct-band" id="consult">
       <div class="ct-wrap ct-layout">
-        <form class="ct-form" id="consult-form" action="" method="get" onsubmit="return false;" novalidate>
+        <form class="ct-form" id="consult-form" action="" method="get" onsubmit="return false;" novalidate autocomplete="off">
           <div class="ct-form__head">
             <div>
               <p class="ct-eyebrow">Specification Protocol // Intake</p>
@@ -525,6 +525,17 @@
           return;
         }
       }
+
+      form.reset();
+      note.textContent = "";
+      document.querySelectorAll(".ct-class__btn").forEach((item, index) => {
+        item.setAttribute("aria-pressed", String(index === 0));
+      });
+      document.querySelectorAll(".ct-stage button").forEach((item, index) => {
+        item.setAttribute("aria-pressed", String(index === 0));
+      });
+      document.getElementById("classification").value = "Private Residence";
+      document.getElementById("stage").value = "Schematic / Concept";
       window.location.href = "404.html";
     });
   </script>

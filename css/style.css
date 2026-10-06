@@ -289,8 +289,13 @@ body.is-loading { overflow: hidden; }
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
 }
-.logo { justify-self: start; }
-.logo img { height: 34px; width: auto; }
+.logo { justify-self: start; display: inline-flex; align-items: center; }
+.logo img,
+.footer__brand img {
+  height: 34px;
+  width: auto;
+  display: block;
+}
 .nav {
   display: flex;
   align-items: center;
@@ -546,8 +551,9 @@ body.is-loading { overflow: hidden; }
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-.card__media { position: relative; aspect-ratio: 16 / 11; background: #ddd; }
+.card__media { position: relative; aspect-ratio: 16 / 11; background: #ddd; overflow: hidden; }
 .card__media img { width: 100%; height: 100%; object-fit: cover; }
 .badge {
   position: absolute;
@@ -1222,15 +1228,18 @@ body.is-loading { overflow: hidden; }
 
 .footer { background: #fff; padding: 64px 40px 0; }
 .footer__grid {
-  max-width: 1180px;
+  max-width: 1440px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.35fr 0.85fr 1fr 1.15fr;
   gap: 48px;
   padding-bottom: 48px;
 }
-.footer__brand a { display: inline-block; margin-bottom: 18px; }
-.footer__brand img { height: 36px; width: auto; display: block; }
+.footer__brand a {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
 .footer__brand > p:first-of-type {
   color: #6d6d6d;
   font-size: 14.5px;
@@ -1299,7 +1308,7 @@ body.is-loading { overflow: hidden; }
 }
 .form-note { min-height: 1.2em; margin-top: 8px; font-size: 13px; color: #128f7c; }
 .footer__bar {
-  max-width: 1180px;
+  max-width: 1440px;
   margin: 0 auto;
   border-top: 1px solid #e6e6e6;
   padding: 18px 0 22px;
@@ -1870,11 +1879,27 @@ html:has(body.missing) {
 .filters button {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
 }
-.card__media img {
+.card__media img,
+.svc-card img,
+.bl-card img,
+.abt-team img,
+.bl-person img {
   transition: transform 0.45s ease;
 }
 .project.is-open .project__media img {
   transition: transform 0.45s ease;
+}
+.svc-card,
+.bl-card,
+.bl-person,
+.abt-team article,
+.ct-phase,
+.ct-desk,
+.process__grid li,
+.svc-price,
+.abt-tenets__grid article,
+.abt-show article {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
 }
 .card:hover,
 .reasons__grid article:hover,
@@ -1884,6 +1909,16 @@ html:has(body.missing) {
 .zone:hover,
 .member:hover,
 .card-block:hover,
+.svc-card:hover,
+.bl-card:hover,
+.bl-person:hover,
+.abt-team article:hover,
+.ct-phase:hover,
+.ct-desk:hover,
+.process__grid li:hover,
+.svc-price:hover,
+.abt-tenets__grid article:hover,
+.abt-show article:hover,
 .card[data-aos].aos-animate:hover,
 .reasons__grid article[data-aos].aos-animate:hover,
 .stories__grid blockquote[data-aos].aos-animate:hover,
@@ -1895,7 +1930,11 @@ html:has(body.missing) {
   transform: translateY(-6px);
   box-shadow: 0 18px 36px rgba(20, 20, 20, 0.1);
 }
-.card:hover .card__media img { transform: scale(1.06); }
+.card:hover .card__media img,
+.svc-card:hover img,
+.bl-card:hover img,
+.abt-team article:hover img,
+.bl-person:hover img { transform: scale(1.06); }
 .project__media { overflow: hidden; }
 .project.is-open:hover .project__media img { transform: scale(1.04); }
 .scene:hover { border-color: var(--gold); background: #fff; }
@@ -1918,7 +1957,21 @@ table.data tbody tr:hover { background: #faf8f4; }
   .zone,
   .member,
   .card-block,
+  .svc-card,
+  .bl-card,
+  .bl-person,
+  .abt-team article,
+  .ct-phase,
+  .ct-desk,
+  .process__grid li,
+  .svc-price,
+  .abt-tenets__grid article,
+  .abt-show article,
   .card__media img,
+  .svc-card img,
+  .bl-card img,
+  .abt-team img,
+  .bl-person img,
   .project__media img { transition: none; }
   .marquee__track { animation: none; }
 }
@@ -2150,7 +2203,7 @@ table.data tbody tr:hover { background: #faf8f4; }
   border-radius: 16px;
   overflow: hidden;
 }
-.svc-card__media { position: relative; }
+.svc-card__media { position: relative; overflow: hidden; }
 .svc-card img { width: 100%; height: 148px; object-fit: cover; }
 .svc-card__badge {
   position: absolute;
@@ -2806,11 +2859,14 @@ table.data tbody tr:hover { background: #faf8f4; }
   display: flex;
   flex-direction: column;
   border-radius: 16px;
+  overflow: hidden;
 }
 .abt-team img {
   height: 196px;
   border-radius: 12px;
   object-position: center top;
+  width: 100%;
+  object-fit: cover;
 }
 .abt-team h3,
 .abt-team .abt-role,
@@ -4059,7 +4115,7 @@ table.data tbody tr:hover { background: #faf8f4; }
   flex-direction: column;
 }
 .bl-card[hidden] { display: none; }
-.bl-card figure { position: relative; margin: 0; }
+.bl-card figure { position: relative; margin: 0; overflow: hidden; }
 .bl-card img {
   display: block;
   width: 100%;
@@ -4082,7 +4138,7 @@ table.data tbody tr:hover { background: #faf8f4; }
 
 .bl-minds { background: #f7f8fb; padding: 64px 0; }
 .bl-people { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-.bl-person { background: #fff; border: 1px solid #e6e8ee; border-radius: 16px; padding: 12px 12px 14px; }
+.bl-person { background: #fff; border: 1px solid #e6e8ee; border-radius: 16px; padding: 12px 12px 14px; overflow: hidden; }
 .bl-person > img { width: 100%; height: 220px; object-fit: cover; border-radius: 12px; }
 .bl-person h3 { margin: 12px 0 0; font-size: 16px; font-weight: 600; }
 .bl-person .bl-role { margin: 4px 0 0; color: #1a9b8e; font-size: 12.5px; font-weight: 600; }
