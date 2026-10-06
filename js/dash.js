@@ -12,12 +12,17 @@ const backdrop = document.querySelector(".backdrop");
 
   const nameEl = document.getElementById("dash-name");
   const avatarEl = document.getElementById("dash-avatar");
+  const emailEl = document.getElementById("dash-email");
   const roleEl = document.getElementById("dash-role");
   const signOut = document.getElementById("dash-signout");
 
   if (auth && auth.name && nameEl) {
     nameEl.textContent = auth.name;
     if (avatarEl) avatarEl.textContent = auth.initials || auth.name.slice(0, 2).toUpperCase();
+    if (emailEl && auth.email) {
+      emailEl.textContent = auth.email;
+      emailEl.title = auth.email;
+    }
     if (roleEl) {
       roleEl.textContent = auth.role === "admin" ? "Studio lead" : "Homeowner";
     }

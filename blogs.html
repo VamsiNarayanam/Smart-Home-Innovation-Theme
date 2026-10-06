@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
@@ -41,8 +42,9 @@
         <a href="index.html#top">Home</a>
         <a href="services.html">Services</a>
         <a href="about.html">About</a>
+          <a href="blogs.html" aria-current="page">Blogs</a>
         <a href="contact.html">Contact Us</a>
-        <a href="blogs.html" aria-current="page">Blogs</a>
+
         <a class="nav__signin" href="login.html">Sign in</a>
       </nav>
       <a class="header__signin" href="login.html">Sign in</a>
@@ -62,13 +64,13 @@
         </div>
         <h1>Spatial Intelligence, Invisible<br>Engineering &amp; The Modern Estate.</h1>
         <p class="bl-hero__copy">Field notes from architects and engineers on lighting, conduit, acoustics, and the low-voltage spine — written while the drawings are still open.</p>
-        <ul class="bl-filters" id="filters">
-          <li><a class="is-on" href="404.html">All publications</a></li>
-          <li><a href="404.html">Acoustic design</a></li>
-          <li><a href="404.html">KNX integration</a></li>
-          <li><a href="404.html">Conduit &amp; low voltage</a></li>
-          <li><a href="404.html">Thermal HVAC</a></li>
-          <li><a href="404.html">Estate case studies</a></li>
+        <ul class="bl-filters" id="filters" role="tablist" aria-label="Filter publications">
+          <li><button type="button" class="is-on" role="tab" aria-selected="true" data-filter="all">All publications</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-filter="acoustic">Acoustic design</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-filter="knx">KNX integration</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-filter="conduit">Conduit &amp; low voltage</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-filter="hvac">Thermal HVAC</button></li>
+          <li><button type="button" role="tab" aria-selected="false" data-filter="estate">Estate case studies</button></li>
         </ul>
       </div>
     </section>
@@ -92,10 +94,10 @@
             <footer id="feature-by">Marcus Vance, AIA — Head of architectural systems</footer>
           </blockquote>
           <div class="bl-feature__foot">
-            <a class="bl-more" id="feature-link" href="#reports">Read full monograph →</a>
+            <a class="bl-more" id="feature-link" href="#reports">Read full monograph <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             <div class="bl-arrows">
-              <button type="button" id="feature-prev" aria-label="Previous monograph">←</button>
-              <button type="button" id="feature-next" aria-label="Next monograph">→</button>
+              <button type="button" id="feature-prev" aria-label="Previous monograph"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+              <button type="button" id="feature-next" aria-label="Next monograph"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
             </div>
           </div>
         </div>
@@ -130,7 +132,7 @@
                   <span>Head of spatial software</span>
                 </div>
               </div>
-              <a href="404.html">Read report →</a>
+              <a href="404.html">Read report <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
           </article>
           <article class="bl-card" data-topics="conduit knx">
@@ -150,7 +152,7 @@
                   <span>Director of low-voltage systems</span>
                 </div>
               </div>
-              <a href="404.html">Read report →</a>
+              <a href="404.html">Read report <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
           </article>
           <article class="bl-card" data-topics="estate conduit hvac">
@@ -170,7 +172,7 @@
                   <span>Principal architectural engineer</span>
                 </div>
               </div>
-              <a href="404.html">Read report →</a>
+              <a href="404.html">Read report <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
           </article>
         </div>
@@ -246,7 +248,7 @@
               </select>
             </label>
             <div class="bl-join__actions">
-              <button type="submit">Subscribe to Dispatch →</button>
+              <button type="submit">Subscribe to Dispatch <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
               <p>Zero promotional spam. Strict technical documentation only.</p>
             </div>
           </form>
@@ -279,7 +281,7 @@
             <span>Direct Architectural Desk</span>
             <a href="404.html">+1 (800) 492-STCK</a>
           </div>
-          <a class="bl-cta" href="404.html">Book Consultation &amp; Technical Review →</a>
+          <a class="bl-cta" href="404.html">Book Consultation &amp; Technical Review <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </aside>
       </div>
     </section>
@@ -303,12 +305,12 @@
         <a href="404.html">Wi-Fi &amp; Fiber Core</a>
       </div>
       <div>
-        <h3>Company</h3>
-        <a href="about.html">About Us</a>
-        <a href="404.html">Architectural Portfolio</a>
-        <a href="404.html">Engineering Standards</a>
-        <a href="404.html">Careers at STACKLY</a>
-        <a href="404.html">Press &amp; Publications</a>
+        <h3>Quick links</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blogs.html">Blog</a>
+        <a href="contact.html">Contact</a>
       </div>
       <form class="footer__form" id="newsletter" novalidate onsubmit="return false">
         <h3>Architectural Dispatch</h3>
@@ -390,6 +392,87 @@
     document.getElementById("feature-prev").addEventListener("click", () => showFeature(slide - 1));
     document.getElementById("feature-next").addEventListener("click", () => showFeature(slide + 1));
 
+    (function initPublicationFilters() {
+      const filterBar = document.getElementById("filters");
+      const library = document.querySelector("#reports .bl-grid");
+      const note = document.getElementById("filter-note");
+      if (!filterBar || !library) return;
+
+      const buttons = Array.from(filterBar.querySelectorAll("[data-filter]"));
+      const cards = Array.from(library.querySelectorAll(".bl-card"));
+      const labels = {
+        all: "All publications",
+        acoustic: "Acoustic design",
+        knx: "KNX integration",
+        conduit: "Conduit & low voltage",
+        hvac: "Thermal HVAC",
+        estate: "Estate case studies"
+      };
+
+      function revealInView() {
+        document.querySelectorAll(".blogs [data-aos]").forEach((el) => {
+          if (el.hasAttribute("hidden") || el.classList.contains("is-filter-out")) return;
+          const rect = el.getBoundingClientRect();
+          const inView = rect.bottom > 0 && rect.top < window.innerHeight * 0.98;
+          if (inView) el.classList.add("aos-animate");
+        });
+
+        if (typeof gsap === "undefined") return;
+        document.querySelectorAll(".blogs [data-gsap-text='ready']").forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.bottom <= 0 || rect.top >= window.innerHeight * 0.98) return;
+          const words = el.querySelectorAll(".gsap-line__word > span");
+          if (words.length) gsap.set(words, { yPercent: 0, opacity: 1, clearProps: "willChange" });
+          else gsap.set(el, { clearProps: "opacity,transform" });
+        });
+      }
+
+      function refreshMotion() {
+        if (typeof AOS !== "undefined") AOS.refreshHard();
+        if (typeof ScrollTrigger !== "undefined") ScrollTrigger.refresh();
+        revealInView();
+      }
+
+      function applyFilter(value) {
+        let visible = 0;
+        cards.forEach((card) => {
+          const topics = (card.dataset.topics || "").toLowerCase().split(/\s+/);
+          const match = value === "all" || topics.includes(value);
+          card.classList.toggle("is-filter-out", !match);
+          card.toggleAttribute("hidden", !match);
+          card.setAttribute("aria-hidden", match ? "false" : "true");
+          if (match) {
+            visible += 1;
+            card.classList.add("aos-animate");
+          }
+        });
+
+        buttons.forEach((button) => {
+          const on = button.dataset.filter === value;
+          button.classList.toggle("is-on", on);
+          button.setAttribute("aria-selected", on ? "true" : "false");
+        });
+
+        if (note) {
+          note.textContent = visible
+            ? ""
+            : "No field reports in “" + (labels[value] || value) + "” yet.";
+        }
+
+        requestAnimationFrame(() => {
+          refreshMotion();
+          requestAnimationFrame(refreshMotion);
+        });
+      }
+
+      filterBar.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-filter]");
+        if (!button || !filterBar.contains(button)) return;
+        event.preventDefault();
+        applyFilter(button.dataset.filter);
+      });
+    })();
+
     document.getElementById("dispatch").addEventListener("submit", (event) => {
       event.preventDefault();
       const form = event.currentTarget;
@@ -410,6 +493,8 @@
     });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="js/preloader.js"></script>
   <script src="js/main.js"></script>
   <script src="js/motion.js"></script>

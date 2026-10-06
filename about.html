@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
@@ -41,8 +42,9 @@
         <a href="index.html#top">Home</a>
         <a href="services.html">Services</a>
         <a href="about.html" aria-current="page">About</a>
-        <a href="contact.html">Contact Us</a>
         <a href="blogs.html">Blogs</a>
+        <a href="contact.html">Contact Us</a>
+  
         <a class="nav__signin" href="login.html">Sign in</a>
       </nav>
       <a class="header__signin" href="login.html">Sign in</a>
@@ -197,28 +199,28 @@
             <h3>Marcus Vance</h3>
             <p class="abt-role">Co-founder &amp; Principal Architectural Engineer</p>
             <p>Former Senior Associate at Foster + Partners. Certified KNX Master with 15 years designing structural integration in North America and Western Europe.</p>
-            <a href="404.html">Direct Commissioning <span aria-hidden="true">↗</span></a>
+            <a href="404.html">Direct Commissioning <i class="fa-solid fa-arrow-up-right" aria-hidden="true"></i></a>
           </article>
           <article>
             <img src="Images/Elena%20Rostova.webp" alt="Elena Rostova at a laptop reviewing floor plans">
             <h3>Elena Rostova</h3>
             <p class="abt-role">Head of Spatial Software &amp; UX</p>
             <p>Ex-Bang &amp; Olufsen interaction lead. Specializes in low-distraction environmental telemetry and zero-latency localized touch panels.</p>
-            <a href="404.html">Interface Architecture <span aria-hidden="true">↗</span></a>
+            <a href="404.html">Interface Architecture <i class="fa-solid fa-arrow-up-right" aria-hidden="true"></i></a>
           </article>
           <article>
             <img src="Images/Julian%20Thorne.webp" alt="Julian Thorne at an electronics bench with a drawn schematic">
             <h3>Julian Thorne</h3>
             <p class="abt-role">Director of Low-Voltage Systems</p>
             <p>20+ years enterprise network infrastructure and precision electrical distribution. Oversees rack fabrication, circuit isolation, and surge mitigation.</p>
-            <a href="404.html">Hardware Standards <span aria-hidden="true">↗</span></a>
+            <a href="404.html">Hardware Standards <i class="fa-solid fa-arrow-up-right" aria-hidden="true"></i></a>
           </article>
           <article>
             <img src="Images/Maya%20Lin-Siddiq.webp" alt="Maya Lin-Siddiq standing at a desk of drawings and material samples">
             <h3>Maya Lin-Siddiq</h3>
             <p class="abt-role">Lead Circadian &amp; Acoustic Designer</p>
             <p>Illuminating Engineering Society (IES) member. Translates architectural fenestration into multi-spectral DALI-2 daylight simulations and acoustic zoning.</p>
-            <a href="404.html">Photometric Logic <span aria-hidden="true">↗</span></a>
+            <a href="404.html">Photometric Logic <i class="fa-solid fa-arrow-up-right" aria-hidden="true"></i></a>
           </article>
         </div>
       </div>
@@ -329,7 +331,7 @@
           <h2>Collaborate on Your Next<br>Estate.</h2>
           <p>Whether you are an architect designing a ground-up residence, an interior designer seeking tactile switches, or an owner commissioning a legacy home—our team is ready for discovery.</p>
           <div class="abt-close__actions">
-            <a class="btn btn--light" href="404.html">Book an Architectural Consultation →</a>
+            <a class="btn btn--light" href="404.html">Book an Architectural Consultation <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             <a class="btn abt-close__mail" href="mailto:architectural@stacklyliving.com">architectural@stacklyliving.com</a>
           </div>
         </div>
@@ -355,12 +357,12 @@
         <a href="404.html">Wi-Fi &amp; Fiber Core</a>
       </div>
       <div>
-        <h3>Company</h3>
-        <a href="about.html">About Us</a>
-        <a href="404.html">Architectural Portfolio</a>
-        <a href="404.html">Engineering Standards</a>
-        <a href="404.html">Careers at STACKLY</a>
-        <a href="404.html">Press &amp; Publications</a>
+        <h3>Quick links</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blogs.html">Blog</a>
+        <a href="contact.html">Contact</a>
       </div>
       <form class="footer__form" id="newsletter" novalidate onsubmit="return false">
         <h3>Architectural Dispatch</h3>
@@ -386,6 +388,8 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="js/preloader.js"></script>
   <script src="js/main.js"></script>
   <script src="js/motion.js"></script>

@@ -140,3 +140,73 @@ document.getElementById("newsletter").addEventListener("submit", (event) => {
     window.location.href = "404.html";
   }, 1200);
 });
+
+(function initCountUp() {
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const targets = document.querySelectorAll(
+    ".stats li > strong, .abt-stats li > strong, .svc-stat > strong, .approach__meta dd"
+  );
+  if (!targets.length) return;
+
+  function parseTarget(text) {
+    const match = String(text || "").trim().match(/^([^A-Za-z]*?)(\d+(?:\.\d+)?)(.*)$/);
+    if (!match) return null;
+    const value = Number(match[2]);
+    if (!Number.isFinite(value)) return null;
+    return {
+      prefix: match[1],
+      value,
+      suffix: match[3],
+      decimals: (match[2].split(".")[1] || "").length
+    };
+  }
+
+  function formatValue(n, decimals) {
+    return decimals > 0 ? n.toFixed(decimals) : String(Math.round(n));
+  }
+
+  function animate(el, meta) {
+    const duration = 1400;
+    const start = performance.now();
+    function frame(now) {
+      const t = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = meta.prefix + formatValue(meta.value * eased, meta.decimals) + meta.suffix;
+      if (t < 1) requestAnimationFrame(frame);
+      else el.textContent = meta.prefix + formatValue(meta.value, meta.decimals) + meta.suffix;
+    }
+    requestAnimationFrame(frame);
+  }
+
+  const items = [];
+  targets.forEach((el) => {
+    const meta = parseTarget(el.textContent);
+    if (!meta) return;
+    el.textContent = meta.prefix + formatValue(0, meta.decimals) + meta.suffix;
+    items.push({ el, meta });
+  });
+  if (!items.length) return;
+
+  if (reduced) {
+    items.forEach(({ el, meta }) => {
+      el.textContent = meta.prefix + formatValue(meta.value, meta.decimals) + meta.suffix;
+    });
+    return;
+  }
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const item = items.find((row) => row.el === entry.target);
+        if (!item || item.el.dataset.countDone) return;
+        item.el.dataset.countDone = "1";
+        io.unobserve(item.el);
+        animate(item.el, item.meta);
+      });
+    },
+    { threshold: 0.15, rootMargin: "0px 0px -5% 0px" }
+  );
+
+  items.forEach(({ el }) => io.observe(el));
+})();

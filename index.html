@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
@@ -41,8 +42,9 @@
         <a href="index.html">Home</a> 
         <a href="services.html">Services</a>
         <a href="about.html">About</a>
-        <a href="contact.html">Contact Us</a>
         <a href="blogs.html">Blogs</a>
+        <a href="contact.html">Contact Us</a>
+    
         <a class="nav__signin" href="login.html">Sign in</a>
       </nav>
       <a class="header__signin" href="login.html">Sign in</a>
@@ -143,7 +145,7 @@
           <div class="card__body">
             <h3>Smart Lighting</h3>
             <p>Tunable circadian lighting, automated scene dimming, and custom tactile brass keypads.</p>
-            <a href="404.html">Learn More <span aria-hidden="true">→</span></a>
+            <a href="404.html">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
         <article class="card">
@@ -154,7 +156,7 @@
           <div class="card__body">
             <h3>Climate Control</h3>
             <p>Multi-zone intelligent temperature and air quality monitoring with invisible linear diffusers.</p>
-            <a href="404.html">Learn More <span aria-hidden="true">→</span></a>
+            <a href="404.html">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
         <article class="card">
@@ -165,7 +167,7 @@
           <div class="card__body">
             <h3>Home Security</h3>
             <p>Biometric access, AI perimeter detection, and private encrypted 24/7 telemetry monitoring.</p>
-            <a href="404.html">Learn More <span aria-hidden="true">→</span></a>
+            <a href="404.html">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
         <article class="card">
@@ -176,7 +178,7 @@
           <div class="card__body">
             <h3>Smart Audio &amp; Video</h3>
             <p>Lossless multi-room streaming, hidden architectural speakers, and reference calibration.</p>
-            <a href="404.html">Learn More <span aria-hidden="true">→</span></a>
+            <a href="404.html">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
         <article class="card">
@@ -187,7 +189,7 @@
           <div class="card__body">
             <h3>Motorized Blinds</h3>
             <p>Solar-tracking motorized drapery and ultra-quiet silent-glide architectural roller blinds.</p>
-            <a href="404.html">Learn More <span aria-hidden="true">→</span></a>
+            <a href="404.html">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
         <article class="card">
@@ -198,7 +200,7 @@
           <div class="card__body">
             <h3>Access Control</h3>
             <p>Keyless entry, two-way HD video intercoms, guest digital passes, and gate automation.</p>
-            <a href="404.html">Learn More <span aria-hidden="true">→</span></a>
+            <a href="404.html">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
         <article class="card">
@@ -209,7 +211,7 @@
           <div class="card__body">
             <h3>Home Networking</h3>
             <p>Enterprise-grade multi-gigabit mesh Wi-Fi 7 backbone, isolated VLANs, and fiber spine.</p>
-            <a href="404.html">Learn More <span aria-hidden="true">→</span></a>
+            <a href="404.html">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
         <article class="card">
@@ -220,7 +222,7 @@
           <div class="card__body">
             <h3>Whole-Home Core</h3>
             <p>Unified single-touch and intuitive localized controls coordinating all hardware natively.</p>
-            <a href="404.html">Learn More <span aria-hidden="true">→</span></a>
+            <a href="404.html">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
       </div>
@@ -261,7 +263,11 @@
         <h2>Installed &amp; Living</h2>
 
         <article class="project">
-          <img src="Images/Hillside-villa.webp" alt="Night view of a glass hillside villa with warm interior lighting">
+          <div class="project__media">
+            <img src="Images/Hillside-villa.webp" alt="Night view of a glass hillside villa with warm interior lighting">
+            <span class="project__shutter project__shutter--top" aria-hidden="true"></span>
+            <span class="project__shutter project__shutter--bot" aria-hidden="true"></span>
+          </div>
           <div class="project__meta">
             <div>
               <h3>Hillside Villa</h3>
@@ -272,7 +278,11 @@
         </article>
 
         <article class="project">
-          <img src="Images/lumen-apartment.webp" alt="Dark kitchen with a warm linear light above a stone counter">
+          <div class="project__media">
+            <img src="Images/lumen-apartment.webp" alt="Dark kitchen with a warm linear light above a stone counter">
+            <span class="project__shutter project__shutter--top" aria-hidden="true"></span>
+            <span class="project__shutter project__shutter--bot" aria-hidden="true"></span>
+          </div>
           <div class="project__meta">
             <div>
               <h3>Lumen Apartment</h3>
@@ -283,7 +293,11 @@
         </article>
 
         <article class="project">
-          <img src="Images/sigma-office.webp" alt="Black wall panel showing lighting at 4000K and security armed">
+          <div class="project__media">
+            <img src="Images/sigma-office.webp" alt="Black wall panel showing lighting at 4000K and security armed">
+            <span class="project__shutter project__shutter--top" aria-hidden="true"></span>
+            <span class="project__shutter project__shutter--bot" aria-hidden="true"></span>
+          </div>
           <div class="project__meta">
             <div>
               <h3>Sigma Offices</h3>
@@ -398,49 +412,120 @@
           <h2>Designed for the Way You Live</h2>
           <p>Insights from luxury homeowners, architects, and estate managers who trust LUMEN.</p>
         </div>
-        <div class="stories__grid">
-          <blockquote>
-            <div class="stars" aria-label="5 stars">
-              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
-              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
-              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
-              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
-              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
-            </div>
-            <p>“LUMEN’s approach is unlike any AV contractor we have partnered with. Their engineering drawings matched our architectural CAD standards precisely. The system operates as though it were part of the building’s original skeleton.”</p>
-            <footer>
-              <cite>Marcus Vance, AIA</cite>
-              <span>Principal Architect, Vance &amp; Studio</span>
-            </footer>
-          </blockquote>
-          <blockquote>
-            <div class="stars" aria-label="5 stars">
-              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
-              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
-              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
-              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
-              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
-            </div>
-            <p>“The circadian lighting alone has completely changed how we experience winter evenings in Aspen. When we step in from the cold, the residence automatically transitions to a serene amber calm. Zero friction, zero confusion.”</p>
-            <footer>
-              <cite>Elena Rostova</cite>
-              <span>Homeowner, The Glass Pavilion</span>
-            </footer>
-          </blockquote>
-          <blockquote>
-            <div class="stars" aria-label="5 stars">
-              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
-              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
-              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
-              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
-              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
-            </div>
-            <p>“Managing a 18,000 sq ft compound requires foolproof diagnostic telemetry. LUMEN detects voltage anomalies before the homeowner ever notices. Their proactive remote oversight is unparalleled.”</p>
-            <footer>
-              <cite>David Sterling</cite>
-              <span>Private Estate Director, Beverly Hills</span>
-            </footer>
-          </blockquote>
+        <div class="stories__slider" data-stories-slider>
+          <div class="stories__grid" data-stories-track>
+            <blockquote>
+              <div class="stars" aria-label="5 stars">
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+              </div>
+              <p>“LUMEN’s approach is unlike any AV contractor we have partnered with. Their engineering drawings matched our architectural CAD standards precisely. The system operates as though it were part of the building’s original skeleton.”</p>
+              <footer>
+                <img class="stories__avatar" src="Images/Marcus%20Vance.webp" alt="" width="48" height="48">
+                <div>
+                  <cite>Marcus Vance, AIA</cite>
+                  <span>Principal Architect, Vance &amp; Studio</span>
+                </div>
+              </footer>
+            </blockquote>
+            <blockquote>
+              <div class="stars" aria-label="5 stars">
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+              </div>
+              <p>“The circadian lighting alone has completely changed how we experience winter evenings in Aspen. When we step in from the cold, the residence automatically transitions to a serene amber calm. Zero friction, zero confusion.”</p>
+              <footer>
+                <img class="stories__avatar" src="Images/Elena%20Rostova.webp" alt="" width="48" height="48">
+                <div>
+                  <cite>Elena Rostova</cite>
+                  <span>Homeowner, The Glass Pavilion</span>
+                </div>
+              </footer>
+            </blockquote>
+            <blockquote>
+              <div class="stars" aria-label="5 stars">
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+              </div>
+              <p>“Managing a 18,000 sq ft compound requires foolproof diagnostic telemetry. LUMEN detects voltage anomalies before the homeowner ever notices. Their proactive remote oversight is unparalleled.”</p>
+              <footer>
+                <img class="stories__avatar" src="Images/Julian%20Thorne.webp" alt="" width="48" height="48">
+                <div>
+                  <cite>David Sterling</cite>
+                  <span>Private Estate Director, Beverly Hills</span>
+                </div>
+              </footer>
+            </blockquote>
+            <blockquote>
+              <div class="stars" aria-label="5 stars">
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+              </div>
+              <p>“We specified STACKLY for the acoustic zoning alone. Guest suites stay quiet while the cinema runs full reference, and the DALI scenes never fight the architecture. It feels intentional, not installed.”</p>
+              <footer>
+                <img class="stories__avatar" src="Images/Maya%20Lin-Siddiq.webp" alt="" width="48" height="48">
+                <div>
+                  <cite>Maya Lin-Siddiq</cite>
+                  <span>Circadian &amp; Acoustic Designer</span>
+                </div>
+              </footer>
+            </blockquote>
+            <blockquote>
+              <div class="stars" aria-label="5 stars">
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+              </div>
+              <p>“From the first schematic review, every cable path was drawn against our millwork. Guests never see a keypad fight a stone wall — the house simply responds. That is rare in residential automation.”</p>
+              <footer>
+                <img class="stories__avatar" src="Images/Claire%20Beaumont.webp" alt="" width="48" height="48">
+                <div>
+                  <cite>Claire Beaumont</cite>
+                  <span>Homeowner, Carmel Coastal Residence</span>
+                </div>
+              </footer>
+            </blockquote>
+            <blockquote>
+              <div class="stars" aria-label="5 stars">
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1.6 2.3 5.4 5.8.5-4.4 3.8 1.4 5.7L10 14.2 4.9 17l1.4-5.7L1.9 7.5l5.8-.5L10 1.6Z"/></svg>
+              </div>
+              <p>“Fiber backbone, rack isolation, and surge paths were commissioned as one document. Our facilities team finally has diagnostics we can trust overnight — without waking the principal residence.”</p>
+              <footer>
+                <img class="stories__avatar" src="Images/Henrik%20Berg.webp" alt="" width="48" height="48">
+                <div>
+                  <cite>Henrik Berg</cite>
+                  <span>Estate Technology Manager, Lake Tahoe</span>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+          <nav class="stories__pager" aria-label="Client perspectives pages">
+            <button type="button" class="stories__nav stories__nav--prev" data-stories-prev aria-label="Previous perspectives">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="stories__dots" data-stories-dots role="tablist" aria-label="Perspective pages"></div>
+            <button type="button" class="stories__nav stories__nav--next" data-stories-next aria-label="Next perspectives">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </nav>
         </div>
         <div class="partners" aria-label="Certified partnerships">
           <p>Certified Master Systems Integrator &amp; Enterprise Partnerships</p>
@@ -521,12 +606,12 @@
         <a href="404.html">Wi-Fi &amp; Fiber Core</a>
       </div>
       <div>
-        <h3>Company</h3>
-        <a href="about.html">About Us</a>
-        <a href="404.html">Architectural Portfolio</a>
-        <a href="404.html">Engineering Standards</a>
-        <a href="404.html">Careers at STACKLY</a>
-        <a href="404.html">Press &amp; Publications</a>
+        <h3>Quick links</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blogs.html">Blog</a>
+        <a href="contact.html">Contact</a>
       </div>
       <form class="footer__form" id="newsletter" novalidate onsubmit="return false">
         <h3>Architectural Dispatch</h3>
@@ -552,6 +637,8 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="js/preloader.js"></script>
   <script src="js/main.js"></script>
   <script src="js/motion.js"></script>

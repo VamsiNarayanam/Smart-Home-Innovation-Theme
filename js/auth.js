@@ -12,6 +12,22 @@
     return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
   }
 
+  function showSuccessToast(message, destination) {
+    const toast = document.createElement("div");
+    toast.className = "auth-toast";
+    toast.setAttribute("role", "status");
+    toast.setAttribute("aria-live", "polite");
+    toast.textContent = message;
+    document.body.append(toast);
+    requestAnimationFrame(() => toast.classList.add("is-visible"));
+    window.setTimeout(() => {
+      toast.classList.remove("is-visible");
+      window.setTimeout(() => {
+        window.location.href = destination;
+      }, 200);
+    }, 1400);
+  }
+
   function setSession(name, email, role) {
     const displayName = cleanName(name);
     const payload = {
@@ -73,7 +89,7 @@
 
       error.textContent = "";
       setSession(name.value, email.value, role.value);
-      window.location.href = role.value === "admin" ? "admin.html" : "client.html";
+      showSuccessToast("Login successful. Redirecting to your dashboard...", role.value === "admin" ? "admin.html" : "client.html");
     });
   }
 
@@ -116,7 +132,7 @@
 
       error.textContent = "";
       setSession(name.value, email.value, role.value);
-      window.location.href = "login.html";
+      showSuccessToast("Account created successfully. Redirecting to sign in...", "login.html");
     });
   }
 })();

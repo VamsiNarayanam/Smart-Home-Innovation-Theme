@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
@@ -41,8 +42,9 @@
         <a href="index.html#top">Home</a>
         <a href="services.html">Services</a>
         <a href="about.html">About</a>
-        <a href="contact.html" aria-current="page">Contact Us</a>
         <a href="blogs.html">Blogs</a>
+        <a href="contact.html" aria-current="page">Contact Us</a>
+        
         <a class="nav__signin" href="login.html">Sign in</a>
       </nav>
       <a class="header__signin" href="login.html">Sign in</a>
@@ -158,8 +160,8 @@
               <input name="name" type="text" autocomplete="name" placeholder="e.g. Julian Thorne, AIA" required>
             </label>
             <label class="ct-field">
-              <span>Architecture Studio / Practice / GC</span>
-              <input name="studio" type="text" autocomplete="organization" placeholder="e.g. Studio Olson Architecture">
+              <span>Architecture Studio / Practice / GC *</span>
+              <input name="studio" type="text" required autocomplete="organization" placeholder="e.g. Studio Olson Architecture">
             </label>
             <label class="ct-field">
               <span>Work Email Address *</span>
@@ -170,8 +172,8 @@
               <input name="phone" type="tel" autocomplete="tel" placeholder="+1 (415) 800-0192" required>
             </label>
             <label class="ct-field">
-              <span>Project Geographic Location</span>
-              <input name="location" type="text" autocomplete="address-level2" placeholder="e.g. Carmel-by-the-Sea, California">
+              <span>Project Geographic Location *</span>
+              <input name="location" type="text" required autocomplete="address-level2" placeholder="e.g. Carmel-by-the-Sea, California">
             </label>
             <label class="ct-field">
               <span>Estimated Conditioned Area (Sq Ft / M²)</span>
@@ -186,7 +188,7 @@
           </div>
 
           <div class="ct-block" id="drawings">
-            <p class="ct-block__label ct-block__label--left">Architectural Drawings / CAD / Revit Upload (Optional)</p>
+            <p class="ct-block__label ct-block__label--left">Architectural Drawings / CAD / Revit Upload *</p>
             <label class="ct-drop" id="drop">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.5V5.8M8.6 8.6 12 5.2l3.4 3.4M6 15.5v2.7a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-2.7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <strong id="file-label">Click to upload schematics or drag &amp; drop files</strong>
@@ -196,8 +198,8 @@
           </div>
 
           <label class="ct-brief">
-            <span>System Focus &amp; Technical Considerations</span>
-            <textarea name="brief" placeholder="Describe specific technical requirements, preferred protocols (KNX, Crestron, Control4, Lutron), ceiling void constraints, heritage restrictions, or DALI-2 lighting ambitions..."></textarea>
+            <span>System Focus &amp; Technical Considerations *</span>
+            <textarea name="brief" required minlength="10" placeholder="Describe specific technical requirements, preferred protocols (KNX, Crestron, Control4, Lutron), ceiling void constraints, heritage restrictions, or DALI-2 lighting ambitions..."></textarea>
           </label>
 
           <div class="ct-form__foot">
@@ -205,7 +207,7 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="9" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 10.5V8.2a4 4 0 0 1 8 0v2.3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
               Protected by mutual architectural non-disclosure protocol
             </p>
-            <button class="ct-submit" type="submit">Request Consultation &amp; Technical Review →</button>
+            <button class="ct-submit" type="submit">Request Consultation &amp; Technical Review <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
             <p class="ct-note" id="consult-note" role="status"></p>
           </div>
         </form>
@@ -347,7 +349,7 @@
               <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.2 4.8h2.2l1.2 2.8-1.5 1a11 11 0 0 0 5.3 5.3l1-1.5 2.8 1.2v2.2a1.4 1.4 0 0 1-1.5 1.4A13.2 13.2 0 0 1 6.8 6.3a1.4 1.4 0 0 1 1.4-1.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><a href="tel:+919488212345">+91 94882 12345</a></li>
               <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="5.5" width="15" height="14" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 9.5h15M8 4.5v3M16 4.5v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Mon – Sat: 09:00 – 18:30 IST</span></li>
             </ul>
-            <footer><a href="404.html">Book Studio Visit →</a></footer>
+            <footer><a href="404.html">Book Studio Visit <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></footer>
           </article>
           <article class="ct-studio">
             <div class="ct-studio__top"><span>Karnataka tech corridor</span>
@@ -359,7 +361,7 @@
               <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.2 4.8h2.2l1.2 2.8-1.5 1a11 11 0 0 0 5.3 5.3l1-1.5 2.8 1.2v2.2a1.4 1.4 0 0 1-1.5 1.4A13.2 13.2 0 0 1 6.8 6.3a1.4 1.4 0 0 1 1.4-1.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><a href="tel:+918049208800">+91 80 4920 8800</a></li>
               <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="5.5" width="15" height="14" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 9.5h15M8 4.5v3M16 4.5v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Mon – Fri: 09:30 – 18:30 IST</span></li>
             </ul>
-            <footer><a href="404.html">Book Studio Visit →</a></footer>
+            <footer><a href="404.html">Book Studio Visit <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></footer>
           </article>
           <article class="ct-studio">
             <div class="ct-studio__top"><span>Telangana tech hub</span>
@@ -371,7 +373,7 @@
               <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.2 4.8h2.2l1.2 2.8-1.5 1a11 11 0 0 0 5.3 5.3l1-1.5 2.8 1.2v2.2a1.4 1.4 0 0 1-1.5 1.4A13.2 13.2 0 0 1 6.8 6.3a1.4 1.4 0 0 1 1.4-1.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><a href="tel:+914068204400">+91 40 6820 4400</a></li>
               <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="5.5" width="15" height="14" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 9.5h15M8 4.5v3M16 4.5v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Mon – Fri: 09:00 – 18:30 IST</span></li>
             </ul>
-            <footer><a href="404.html">Book Studio Visit →</a></footer>
+            <footer><a href="404.html">Book Studio Visit <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></footer>
           </article>
           <article class="ct-studio">
             <div class="ct-studio__top"><span>Tamil Nadu operations</span>
@@ -383,7 +385,7 @@
               <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.2 4.8h2.2l1.2 2.8-1.5 1a11 11 0 0 0 5.3 5.3l1-1.5 2.8 1.2v2.2a1.4 1.4 0 0 1-1.5 1.4A13.2 13.2 0 0 1 6.8 6.3a1.4 1.4 0 0 1 1.4-1.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><a href="tel:+914222451090">+91 422 245 1090</a></li>
               <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="5.5" width="15" height="14" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 9.5h15M8 4.5v3M16 4.5v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Mon – Sat: 09:00 – 18:00 IST</span></li>
             </ul>
-            <footer><a href="404.html">Book Studio Visit →</a></footer>
+            <footer><a href="404.html">Book Studio Visit <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></footer>
           </article>
         </div>
       </div>
@@ -430,7 +432,7 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.2 4.8h2.2l1.2 2.8-1.5 1a11 11 0 0 0 5.3 5.3l1-1.5 2.8 1.2v2.2a1.4 1.4 0 0 1-1.5 1.4A13.2 13.2 0 0 1 6.8 6.3a1.4 1.4 0 0 1 1.4-1.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
             +1 (800) 492-STCK
           </a>
-          <a class="btn ct-rush__ghost" href="404.html">Upload Drawings →</a>
+          <a class="btn ct-rush__ghost" href="404.html">Upload Drawings <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
     </section>
@@ -454,12 +456,12 @@
         <a href="404.html">Wi-Fi &amp; Fiber Core</a>
       </div>
       <div>
-        <h3>Company</h3>
-        <a href="about.html">About Us</a>
-        <a href="404.html">Architectural Portfolio</a>
-        <a href="404.html">Engineering Standards</a>
-        <a href="404.html">Careers at STACKLY</a>
-        <a href="404.html">Press &amp; Publications</a>
+        <h3>Quick links</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blogs.html">Blog</a>
+        <a href="contact.html">Contact</a>
       </div>
       <form class="footer__form" id="newsletter" novalidate onsubmit="return false">
         <h3>Architectural Dispatch</h3>
@@ -509,6 +511,9 @@
     const fileLabel = document.getElementById("file-label");
     const drop = document.getElementById("drop");
 
+    const allowedExt = ["pdf", "dwg", "rvt", "ifc", "png", "jpg", "jpeg"];
+    const maxBytes = 150 * 1024 * 1024;
+
     const syncFiles = () => {
       const files = [...drawings.files];
       fileLabel.textContent = files.length
@@ -516,7 +521,26 @@
         : defaultFileLabel;
     };
 
-    drawings.addEventListener("change", syncFiles);
+    const setFiles = (list) => {
+      const note = document.getElementById("consult-note");
+      const valid = [];
+      const rejected = [];
+      [...list].forEach((file) => {
+        const ext = file.name.split(".").pop().toLowerCase();
+        if (allowedExt.includes(ext) && file.size <= maxBytes) valid.push(file);
+        else rejected.push(file.name);
+      });
+      const transfer = new DataTransfer();
+      valid.forEach((file) => transfer.items.add(file));
+      drawings.files = transfer.files;
+      syncFiles();
+      note.style.color = "#8a3b32";
+      note.textContent = rejected.length
+        ? "Skipped (unsupported type or over 150MB): " + rejected.join(", ")
+        : "";
+    };
+
+    drawings.addEventListener("change", () => setFiles(drawings.files));
 
     ["dragenter", "dragover"].forEach((type) => {
       drop.addEventListener(type, (event) => {
@@ -532,23 +556,34 @@
     });
     drop.addEventListener("drop", (event) => {
       if (!event.dataTransfer?.files?.length) return;
-      const transfer = new DataTransfer();
-      [...event.dataTransfer.files].forEach((file) => transfer.items.add(file));
-      drawings.files = transfer.files;
-      syncFiles();
+      setFiles(event.dataTransfer.files);
     });
 
     document.getElementById("consult-form").addEventListener("submit", (event) => {
       event.preventDefault();
       const form = event.currentTarget;
       const note = document.getElementById("consult-note");
-      const name = form.elements.name;
-      const email = form.elements.email;
-      const phone = form.elements.phone;
-      if (!name.value.trim() || !email.checkValidity() || !phone.value.trim()) {
+      const checks = [
+        ["name", (v) => v.length >= 2, "Enter the lead architect / principal name."],
+        ["studio", (v) => v.length >= 2, "Enter the studio, practice or GC name."],
+        ["email", (v, el) => v && el.checkValidity(), "Enter a valid work email address."],
+        ["phone", (v) => /^\+?[\d\s().-]{7,20}$/.test(v) && v.replace(/\D/g, "").length >= 7, "Enter a valid telephone number."],
+        ["location", (v) => v.length >= 2, "Enter the project location."],
+        ["brief", (v) => v.length >= 10, "Describe the system focus (at least 10 characters)."]
+      ];
+      for (const [field, ok, message] of checks) {
+        const el = form.elements[field];
+        if (!ok(el.value.trim(), el)) {
+          note.style.color = "#8a3b32";
+          note.textContent = message;
+          el.focus();
+          return;
+        }
+      }
+      if (!drawings.files.length) {
         note.style.color = "#8a3b32";
-        note.textContent = "Add the lead architect name, a valid work email, and direct telephone.";
-        (name.value.trim() ? (email.checkValidity() ? phone : email) : name).focus();
+        note.textContent = "Upload at least one architectural drawing (PDF, DWG, RVT, IFC or image) before submitting.";
+        drop.scrollIntoView({ behavior: "smooth", block: "center" });
         return;
       }
       const count = drawings.files.length;
@@ -573,6 +608,8 @@
     });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="js/preloader.js"></script>
   <script src="js/main.js"></script>
   <script src="js/motion.js"></script>
