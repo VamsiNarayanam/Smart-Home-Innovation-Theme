@@ -12,6 +12,26 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
+  <div class="preloader" id="preloader" aria-busy="true" aria-live="polite">
+    <div class="preloader__atmosphere" aria-hidden="true">
+      <span class="preloader__orb preloader__orb--a"></span>
+      <span class="preloader__orb preloader__orb--b"></span>
+      <span class="preloader__grid"></span>
+    </div>
+    <div class="preloader__inner">
+      <div class="preloader__mark">
+        <span class="preloader__ring preloader__ring--outer"></span>
+        <span class="preloader__ring preloader__ring--mid"></span>
+        <span class="preloader__ring preloader__ring--inner"></span>
+        <span class="preloader__pulse"></span>
+        <img class="preloader__logo" src="Images/Stackly-logo.webp" alt="Stackly">
+      </div>
+      <p class="preloader__brand">STACKLY</p>
+      <p class="preloader__label">Preparing your space</p>
+      <div class="preloader__dots" aria-hidden="true"><i></i><i></i><i></i></div>
+    </div>
+  </div>
+
   <header class="header" id="top">
     <div class="header__inner">
       <a class="logo" href="index.html" aria-label="Stackly home">
@@ -553,6 +573,7 @@
     });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/preloader.js"></script>
   <script src="js/main.js"></script>
   <script src="js/motion.js"></script>
 </body>

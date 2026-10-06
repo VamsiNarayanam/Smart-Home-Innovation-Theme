@@ -107,6 +107,12 @@
         role.focus();
         return;
       }
+      const terms = document.getElementById("register-terms");
+      if (terms && !terms.checked) {
+        error.textContent = "Please agree to the Terms of Service and Privacy Policy.";
+        terms.focus();
+        return;
+      }
 
       error.textContent = "";
       setSession(name.value, email.value, role.value);
