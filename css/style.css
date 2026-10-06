@@ -312,6 +312,7 @@ body.is-loading { overflow: hidden; }
 }
 .nav a:hover,
 .header__signin:hover { color: #111; }
+.nav a[aria-current="page"] { color: #2563eb; }
 .header__signin { justify-self: end; }
 .nav__signin { display: none; }
 .nav-toggle {
